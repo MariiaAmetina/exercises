@@ -5268,3 +5268,50 @@ console.log(users); */
 // let result2 = each(arr, (elem, index) => elem * index > 10);
 
 
+
+
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+//Работа с рекурсией в JavaScript
+
+// let i = 1;
+// function func() {
+// 	console.log(i);
+// 	i++;
+
+// 	if (i <= 10) {
+// 		func();
+// 	}
+// }
+// func();
+
+// function func(arr) {
+// 	console.log(arr.shift(), arr);
+// 	if (arr.length != 0) {
+// 		func(arr);
+// 	}
+// }
+// func([1, 2, 3]);
+
+
+//Сумма элементов массива
+
+//Сделайте функцию, которая с помощью рекурсии выведет первые 10 чисел Фибоначчи. Числа Фибоначчи строятся следующим образом: каждое новое число равно сумме двух предыдущих. Первые два числа Фибоначчи - это 1 и 2. Следующее число будет равно 1 + 2 = 3, следующее число будет равно 2 + 3 = 5 и так далее.
+function fibonachi(prevPrevNum, prevNum) {
+
+}
+
+// fibonachi(1, 2);
+
+// function getSum(arr) {
+// 	let sum = arr.shift();
+
+// 	if (arr.length != 0) {
+// 		sum += getSum(arr);
+// 	}
+
+// 	return sum;
+// }
+
+// console.log((getSum([1, 2, 3])));
