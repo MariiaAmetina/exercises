@@ -5298,11 +5298,42 @@ console.log(users); */
 //Сумма элементов массива
 
 //Сделайте функцию, которая с помощью рекурсии выведет первые 10 чисел Фибоначчи. Числа Фибоначчи строятся следующим образом: каждое новое число равно сумме двух предыдущих. Первые два числа Фибоначчи - это 1 и 2. Следующее число будет равно 1 + 2 = 3, следующее число будет равно 2 + 3 = 5 и так далее.
-function fibonachi(prevPrevNum, prevNum) {
+// function fibonachi(first, second, i) {
+// 	let fibo = first + second;
+// 	first = second;
+// 	second = fibo;
+// 	i++;
+// 	console.log(fibo);
+	
+// 	if (i < 10) {
+// 		fibo = fibonachi(first, second, i);
+		
+// 	}
+	
+// }
+// fibonachi(1, 2, 0);
 
-}
 
-// fibonachi(1, 2);
+//??????Модифицируйте предыдущую задачу так, чтобы функция не выводила числа, а возвращала массив первых 10 чисел Фибоначчи:
+// function fibonachi(first, second, i) {
+// 	let fibo = first + second;
+// 	let result = [];
+// 	result.push(fibo);
+// 	console.log(result);
+	
+	
+	
+// 	first = second;
+// 	second = fibo;
+// 	i++;
+// 	if (i < 10) {
+// 		fibo = fibonachi(first, second, i);
+		
+// 	}
+	
+// }
+// fibonachi(1, 2, 0);
+
 
 // function getSum(arr) {
 // 	let sum = arr.shift();
@@ -5315,3 +5346,42 @@ function fibonachi(prevPrevNum, prevNum) {
 // }
 
 // console.log((getSum([1, 2, 3])));
+
+
+
+
+
+
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+//Редуцирование числа
+
+
+
+
+
+function getDigitsSum(num) {
+	return getSum(getDigits(num));
+}
+function getSum(arr) {
+	let sum = 0;
+	for (let elem of arr) {
+		sum += Number(elem);
+	}
+	return sum;
+}
+function getDigits(num) {
+	return String(num).split('');
+}
+
+function reduceNum(num) {
+	let sum = getDigitsSum(num);
+
+	if (sum <= 9) {
+		return sum;
+	} else {
+		return reduceNum(sum);
+	}
+}
+console.log(reduceNum(2187));
