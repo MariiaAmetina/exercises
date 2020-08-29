@@ -5357,31 +5357,180 @@ console.log(users); */
 ////////////////////////////////////////////////
 //Редуцирование числа
 
+// function getDigitsSum(num) {
+// 	return getSum(getDigits(num));
+// }
+// function getSum(arr) {
+// 	let sum = 0;
+// 	for (let elem of arr) {
+// 		sum += Number(elem);
+// 	}
+// 	return sum;
+// }
+// function getDigits(num) {
+// 	return String(num).split('');
+// }
+
+// function reduceNum(num) {
+// 	let sum = getDigitsSum(num);
+
+// 	if (sum <= 9) {
+// 		return sum;
+// 	} else {
+// 		return reduceNum(sum);
+// 	}
+// }
+// console.log(reduceNum(2187));
+
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+//Рекурсия и многомерные структуры в JavaScript
+
+// function getArrElem(arr) {
+// 	for (let elem of arr) {
+// 		if (typeof elem == 'object') {
+// 			getArrElem(elem);
+// 		} else {
+// 			console.log(elem);
+// 		}
+// 	}
+// }
+// getArrElem([1, [2, 7, 8], [3, 4, [5, [6, 7]]]]);
+
+// function getObjElem(obj) {
+// 	for (let elem in obj) {
+// 		if (typeof obj[elem] == 'object') {
+// 			getObjElem(obj[elem] );
+// 		} else {
+// 			console.log(obj[elem]);
+// 		}
+// 	}
+// }
+// getObjElem({a: 1, b: {c: 2, d: 3, e: 4}, f: {g: 5, 
+// 	j: 6, k: {l: 7, m: {n: 8, o: 9}}}});
+
+
+// function getArrSum(arr) {
+// 	let sum = 0;
+// 	for (let elem of arr) {
+// 		if (typeof elem == 'object') {
+// 			sum += getArrSum(elem);
+// 		} else {
+// 			sum += elem;
+// 		}
+// 	}
+// 	return sum;
+// }
+// console.log(getArrSum([1, [2, 7, 8], [3, 4, [5, [6, 7]]]]));
+
+// function getObjSum(obj) {
+// 	let sum = 0;
+// 	for (let elem in obj) {
+// 		if (typeof obj[elem] == 'object') {
+// 			sum += getObjSum(obj[elem]);
+// 		} else {
+// 			sum += obj[elem];
+// 		}
+// 	}
+// 	return sum;
+// }
+// console.log(getObjSum({a: 1, b: {c: 2, d: 3, e: 4}, f: {g: 5, 
+// 	j: 6, k: {l: 7, m: {n: 8, o: 9}}}}));
+
+
+//Дан многомерный массив произвольного уровня вложенности, содержащий внутри себя строки. С помощью рекурсии слейте элементы этого массива в одну строку.
+//лучшим решением будет вместо массива создать str и делать str += elem
+// function getStrFromArr(arr) {
+// 	let newArr = [];
+// 	for (let elem of arr) {
+// 		if (typeof elem == 'object') {
+// 			newArr.push(getStrFromArr(elem));
+// 		} else {
+// 			newArr.push(elem);
+// 		}
+// 	}
+// 	return newArr.join('');
+// }
+// console.log(getStrFromArr(['a', ['b', 'c', 'd'], ['e', 'f', ['g', ['j', 'k']]]]));
+
+
+//Дан многомерный массив произвольного уровня вложенности, Возведите все элементы-числа этого массива в квадрат.
+// function getCube(arr) {
+// 	for (let i = 0; i < arr.length; i++) {
+// 		if (typeof arr[i] == 'object') {
+// 			arr[i] = getCube(arr[i]);
+// 		} else {
+// 			arr[i] = arr[i] ** 2;
+// 		}
+// 	}
+// 	return arr;
+// }
+// console.log(getCube([1, [2, 7, 8], [3, 4], [5, [6, 7]]]));
+
+
+//Дан многомерный массив произвольного уровня вложенности, Напишите код, который развернет наш многомерный массив в одномерный. 
+// let array = [];
+// function getNormArr(arr) {
+// 	for (let elem of arr) {
+// 		if (typeof elem == 'object') {
+// 			getNormArr(elem);
+// 		} else {
+// 			array.push(elem);
+// 		}
+// 	}
+// 	return array;
+// }
+// console.log(getNormArr([1, [2, 7, 8], [3, 4, [5, [6, 7]]]]));
+
+
+//Выведите на экран все элементы-массивы, содержащие внутри себя только примитивы
+// function getElem(arr) {
+// 	for (let i = 0; i < arr.length; i++) {
+// 		if (typeof arr[i]== 'object' && isPrimitive(arr[i])) {
+// 			console.log(arr[i]);
+// 		} else {
+// 			getElem(arr[i]);
+// 		}
+// 	}
+// }
+// function isPrimitive(elem) {
+// 	for (let i = 0; i < elem.length; i++) {
+// 		if (typeof elem[i] == 'object') {
+// 			return false;
+// 		} else {
+// 			return true;
+// 		}
+// 	}
+// }
+// getElem([1, [2, 7, 8], [3, 4], [5, [6, 7]]]);
 
 
 
 
-function getDigitsSum(num) {
-	return getSum(getDigits(num));
-}
-function getSum(arr) {
-	let sum = 0;
-	for (let elem of arr) {
-		sum += Number(elem);
+//Дан многомерный массив произвольного уровня вложенности. Подсчитайте с помощью рекурсии самый максимальный уровень вложенности этого массива.
+let arrCount = [];
+let count;
+function insetMax(arr) {
+	for (let i = 0; i < arr.length; i++) {
+		if (typeof arr[i] == 'object') {
+			count = 1;
+			arrCount.push(isArrOfArr(arr[i]));
+		}
 	}
-	return sum;
+	console.log(arrCount);
+	return maxCount(arrCount);
 }
-function getDigits(num) {
-	return String(num).split('');
-}
-
-function reduceNum(num) {
-	let sum = getDigitsSum(num);
-
-	if (sum <= 9) {
-		return sum;
-	} else {
-		return reduceNum(sum);
+function isArrOfArr(elem) {
+	for (let i = 0; i < elem.length; i++) {
+		if (typeof elem[i] == 'object') {
+			count++;
+			isArrOfArr(elem[i]);
+		}
 	}
+	return count;
 }
-console.log(reduceNum(2187));
+function maxCount(arrCount) {
+	return Math.max.apply(null, arrCount);
+}
+console.log(insetMax([1, [2, 7, 8], [3, 4, [55, 56, [57, 58]]], [5, [6, 7, [11, 13, [17, 18, [19, 20, [-2, -3]]]]]]]));
