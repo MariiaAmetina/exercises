@@ -5509,28 +5509,108 @@ console.log(users); */
 
 
 //Дан многомерный массив произвольного уровня вложенности. Подсчитайте с помощью рекурсии самый максимальный уровень вложенности этого массива.
-let arrCount = [];
-let count;
-function insetMax(arr) {
-	for (let i = 0; i < arr.length; i++) {
-		if (typeof arr[i] == 'object') {
-			count = 1;
-			arrCount.push(isArrOfArr(arr[i]));
-		}
-	}
-	console.log(arrCount);
-	return maxCount(arrCount);
-}
-function isArrOfArr(elem) {
-	for (let i = 0; i < elem.length; i++) {
-		if (typeof elem[i] == 'object') {
-			count++;
-			isArrOfArr(elem[i]);
-		}
-	}
-	return count;
-}
-function maxCount(arrCount) {
-	return Math.max.apply(null, arrCount);
-}
-console.log(insetMax([1, [2, 7, 8], [3, 4, [55, 56, [57, 58]]], [5, [6, 7, [11, 13, [17, 18, [19, 20, [-2, -3]]]]]]]));
+// let arrCount = [];
+// let count;
+// function insetMax(arr) {
+// 	for (let i = 0; i < arr.length; i++) {
+// 		if (typeof arr[i] == 'object') {
+// 			count = 1;
+// 			arrCount.push(isArrOfArr(arr[i]));
+// 		}
+// 	}
+// 	console.log(arrCount);
+// 	return maxCount(arrCount);
+// }
+// function isArrOfArr(elem) {
+// 	for (let i = 0; i < elem.length; i++) {
+// 		if (typeof elem[i] == 'object') {
+// 			count++;
+// 			isArrOfArr(elem[i]);
+// 		}
+// 	}
+// 	return count;
+// }
+// function maxCount(arrCount) {
+// 	return Math.max.apply(null, arrCount);
+// }
+// console.log(insetMax([1, [2, 7, 8], [3, 4, [55, 56, [57, 58]]], [5, [6, 7, [11, 13, [17, 18, [19, 20, [-2, -3]]]]]]]));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+//Метод map для перебора массива в JavaScript
+
+// let arr = [4, 16, 9, 3];
+// let result = arr.map(function(elem) {
+// 	return Math.sqrt(elem);
+// });
+// console.log(result);
+
+
+// let arr = [1, 2, 3];
+// let result = arr.map(function(elem) {
+// 	return elem + '!';
+// });
+// console.log(result);
+
+
+// let arr = ['hey', 'bye', 'mom'];
+// let result = arr.map(function(elem) {
+// 	return elem.split('').reverse().join('');
+// });
+// console.log(result);
+
+
+// let arr = ['123', '456', '789'];
+// let result = arr.map(function(elem) {
+// 	let smallArr = [];
+// 	smallArr.push(elem.split(''));
+// 	return smallArr
+// });
+// console.log(result);
+
+
+
+//////////////////////////////////////////////////
+/////////////////////////////////////////////////
+//Ключ элемента
+// let arr = ['a', 'b', 'c', 'd', 'e'];
+// let result = arr.map(function(elem, index) {
+// 	return elem + index;
+// });
+// console.log(result);
+
+
+//Дан массив с числами. Используя метод map запишите в каждый элемент массива значение этого элемента, умноженное на его порядковый номер в массиве.
+// let arr = [1, 3, 8.2, 7, 0];
+// let result = arr.map(function(elem, index) {
+// 	return elem * index;
+// });
+// console.log(result);
+
+
+
+//////////////////////////////////////////////////
+/////////////////////////////////////////////////
+//Перебор многомерных массивов
+let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+let result = arr.map(function(elem) {
+	return elem.map(function(num) {
+		return num * num;
+	});
+});
+console.log(result);
+
