@@ -5728,7 +5728,32 @@ console.log(users); */
 // let result = arr.some(elem => elem > 0);
 // console.log(result);
 
-let arr = [2, 4, 6, 8, 10];
-let result = arr.some((elem, index) => elem * index < 30);
-console.log(result);
+// let arr = [2, 4, 6, 8, 10];
+// let result = arr.some((elem, index) => elem * index < 30);
+// console.log(result);
 
+
+
+
+
+
+
+//////////////////////////////////////////////////
+////////////////////////////////////////////////////
+//Оператор spread в JavaScript
+// let arr = [1, 2, 3, 4, 5];
+// function func(num1, num2, num3, num4, num5) {
+// 	return num1 + num2 + num3 + num4 + num5;
+// }
+// console.log(func(...arr));
+
+// function func(n1, n2, n3, n4, n5, n6, n7, n8) {
+// 	return (n1 + n2 + n3 + n4) * (n5 + n6 + n7 + n8);
+// }
+
+// console.log(func(1, ...[2, 3, 4], 5, ...[6], ...[7, 8]));
+
+
+// let arr = [1, 2, 3, 4, 5];
+// let min = Math.min(...arr);
+// console.log(min);
