@@ -5798,3 +5798,32 @@ console.log(users); */
 // let arr2 = [...arr1, ...'12345'];
 
 // console.log(arr2);
+
+
+
+
+
+
+
+//////////////////////////////////////////////////
+////////////////////////////////////////////////////
+//Оператор rest в JavaScript
+// func(1, 2, 3, 4, 5);
+
+// function func(a, b, ...rest) {
+// 	console.log(a); // выведет 1
+// 	console.log(b); // выведет 2
+// 	console.log(rest); // выведет [3, 4, 5]
+// }
+
+// function func(a, b, ...rest) {
+// 	console.log(a);
+// 	console.log(b);
+// 	console.log(rest);
+// }
+// func(1, 2);
+
+// function func(...rest) {
+// 	console.log(rest);
+// }
+// func(1, 2, 6, 0);
