@@ -5784,3 +5784,17 @@ console.log(users); */
 
 // let arr  = [0, ...arr3];
 // console.log(arr);
+
+// let arr = [...'12345'];
+// console.log(arr);
+
+// let arr = ['a', ...'12345'];
+// console.log(arr);
+
+// let arr = [...'12345', ...'56789'];
+// console.log(arr);
+
+// let arr1 = ['a', 'b', 'c'];
+// let arr2 = [...arr1, ...'12345'];
+
+// console.log(arr2);
