@@ -6044,3 +6044,80 @@ console.log(users); */
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 //Деструктуризация объектов в JavaScript
+
+// let options = {
+// 	color: 'red',
+// 	width:  400,
+// 	height: 500,
+// };
+// let {color, height, width} = options;
+// console.log(height);
+
+
+// let options = {
+// 	color: 'red',
+// 	width:  400,
+// 	height: 500,
+// };
+// let {color : c, width : w, height : h} = options;
+// console.log(w);
+
+
+// let options = {
+// 	width:  400,
+// 	height: 500,
+// };
+// let {year = 3020, width, height} = options;
+// console.log(width, height, year);
+
+
+// let options = {
+// 	width:  400,
+// 	height: 500,
+// };
+// let {year: y = 3334, width: w, height: h} = options;
+// console.log(y, w, h);
+
+
+
+// function func() {
+// 	return (new Date).getFullYear();
+// }
+// let obj = {
+// 	month: 12,
+// 	day:   31,
+// };
+// let {year = func(), month, day} = obj;
+
+
+
+// function func() {
+// 	return obj = {
+// 		year:  2025,
+// 		month: 12,
+// 		day:   31,
+// 	};
+// }
+// let {year, month, day} = func();
+
+
+
+// let obj = {
+// 	year:  2025,
+// 	month: 12,
+// 	day:   31,
+// };
+
+// let year, month, day;
+// ({year, month, day} = obj); //без круглых скобок работать не будет, js не поймет
+
+
+
+
+
+
+
+
+
+
+
