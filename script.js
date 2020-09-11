@@ -5907,3 +5907,50 @@ console.log(users); */
 //////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
 //Разность произвольного количества массивов на JavaScript
+function alt(arr) {
+	// 	let res = [];
+	// 	for(let i = 0; i < arr.length; i ++) {
+	// 	if (i !== arr.indexOf( arr[i] ) || arr.indexOf( arr[i] ) == -1) {
+	// 	res.push( arr[i] )
+	// 	}
+	// 	}
+	// 	return res;
+	// }
+		
+	// function getDiff(arr1, arr2){
+		
+	// 	let diff1 = getFirstDiff(arr1, arr2);
+	// 	let diff2 = getFirstDiff(arr2, arr1);
+		
+	// 	return [].concat( diff1, diff2 );
+	// }
+		
+	// function getFirstDiff(arr1, arr2){
+	// 	let result = [];
+		
+	// 	for (let elem of arr1) {
+	// 	if (!inArray(elem, arr2)) {
+	// 	result.push(elem);
+	// 	}
+	// 	}
+		
+	// 	return result;
+	// }
+		
+	// function inArray(elem, arr){
+	// 	return arr.indexOf(elem) !== -1;
+	// }
+		
+	// function DiffArr(...arrs) {
+	// 	let arr = [].concat(...arrs);
+	// 	return getDiff(alt(arr), arr);
+	// }
+	// console.log( DiffArr([0,1], ['a','b'], [-1,'b'], ['jjj',-1], ['b',52]) )
+
+
+
+
+//////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+//Деструктуризация массивов в JavaScript
+
