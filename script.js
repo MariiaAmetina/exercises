@@ -6121,3 +6121,58 @@ console.log(users); */
 
 
 
+////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+//Деструктуризация параметров функций в JavaScript
+
+// func( ['Иван', 'Иванов', 'отдел разработки', 'программист', 2000] );
+// function func([name, surname, department, position, salary]) {
+// 	console.log(name);
+// 	console.log(surname);
+// 	console.log(department, salary, position);
+// }
+
+
+
+// func( ['Иван', 'Иванов', 'отдел разработки', 'программист', 2000] );
+// function func([name, surname, ...info]) {
+// 	console.log(name, surname);
+// 	console.log(info);
+// }
+
+
+// func( ['Иван', 'Иванов', 'отдел разработки'] );
+// function func([name, surname, department, position = 'junior']) {
+// 	console.log(name, surname);
+// 	console.log(department);
+// 	console.log(position);
+// }
+
+
+
+// func(['отдел разработки', ['Иван', 'Иванов'], '2018-12-31' ]);
+// function func([department, [name, surname], hired]){
+// 	let [year, month, day] = hired.split('-');
+// 	console.log(department);
+// 	console.log(name);
+// 	console.log(surname);
+// 	console.log(year, day, month);
+// }
+
+
+
+// func( {color: 'red', width: 400, height: 500} );
+// function func({color, width, height}) {
+// 	console.log(color);
+// 	console.log(width);
+// 	console.log(height);
+// }
+
+
+
+// func( {width: 400, height: 500} );
+// function func({color = 'black', width, height}) {
+// 	console.log(color);
+// 	console.log(width);
+// 	console.log(height);
+// }
