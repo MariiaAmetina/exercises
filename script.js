@@ -5907,7 +5907,7 @@ console.log(users); */
 //////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
 //Разность произвольного количества массивов на JavaScript
-function alt(arr) {
+// function alt(arr) {
 	// 	let res = [];
 	// 	for(let i = 0; i < arr.length; i ++) {
 	// 	if (i !== arr.indexOf( arr[i] ) || arr.indexOf( arr[i] ) == -1) {
@@ -5953,4 +5953,94 @@ function alt(arr) {
 //////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
 //Деструктуризация массивов в JavaScript
+// let arr = ['Иван', 'Иванов', 'отдел разработки', 'программист', 2000];
 
+// let name       = arr[0];
+// let surname    = arr[1];
+// let department = arr[2];
+// let position   = arr[3];
+// let salary     = arr[4];
+// //or
+// let array = ['Иван', 'Иванов', 'отдел разработки', 'программист', 2000];
+// let [name, surname, department, position, salary] = array;
+// console.log(name);
+
+
+// function func() {
+// 	return ['Иван', 'Иванов', 'отдел разработки', 'программист', 2000];
+// }
+// let [name, surname, department, position, salary] = func();
+// console.log(position);
+
+
+
+// let arr = ['Иван', 'Иванов', 'отдел разработки', 'программист', 2000];
+// let [,, department, position,] = arr;
+// console.log(department + ',' + position);
+
+
+
+// let arr = [2025, 12];
+// let [year, month, day] = arr;
+
+// console.log(year);  // выведет 2025
+// console.log(month); // выведет 12
+// console.log(day);   // выведет undefined
+
+
+
+// let arr = [2025, 12, 31, 23, 59, 59];
+// let [year, month, day] = arr;
+
+// console.log(year);  // выведет 2025
+// console.log(month); // выведет 12
+// console.log(day);   // выведет 31
+
+
+// let arr = [2025, 12, 31, 23, 59, 59];
+// let [year, month, day, ...time] = arr;
+
+// console.log(year);  // выведет 2025
+// console.log(month); // выведет 12
+// console.log(day);   // выведет 31
+
+// console.log(time);   // выведет [23, 59, 59]
+
+
+// let arr = ['Иван', 'Иванов', 'отдел разработки', 'программист', 2000];
+// let [name, surname, ...info] = arr;
+// console.log(name);
+// console.log(surname);
+// console.log(info);
+
+
+// let arr = ['Иван', 'Иванов', 'отдел разработки', 'программист'];
+// let [name, surname, department, position = 'джуниор'] = arr;
+// console.log(name, surname, department, position);
+
+
+
+// function func() {
+// 	return (new Date).getDate();
+// }
+// function year1() {
+// 	return (new Date).getFullYear();
+// }
+// function month1() {
+// 	return (new Date).getMonth();
+// }
+// let arr = [];
+// let [year = year1(), month = month1(), day = func()] = arr;
+// console.log(year, month, day);
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//Деструктуризация объектов в JavaScript
