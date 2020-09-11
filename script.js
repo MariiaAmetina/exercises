@@ -5827,3 +5827,83 @@ console.log(users); */
 // 	console.log(rest);
 // }
 // func(1, 2, 6, 0);
+
+
+
+//////////////////////////////////////////////////
+////////////////////////////////////////////////////
+//Применение операторов rest и spread в JavaScript
+
+//Напишите функцию, которая будет принимать параметрами произвольное количество чисел и возвращать их среднее арифметическое (сумма делить на количество).
+// function getAverage(...nums) {
+// 	let sum = 0, average = 0;
+// 	for (let num of nums) {
+// 		sum += num;
+// 		average = sum / nums.length;
+// 	}
+// 	return average;
+// }
+// console.log(getAverage(1, 2, 3));
+
+
+
+
+//Давайте сделаем функцию unite, которая параметрами будет принимать произвольное количество массивов и сливать их в один двухмерный.
+// let result = unite([1, 2, 3], [4, 5, 6], [7, 8, 9]);
+// function unite(...arrs) {
+// 	return arrs;
+// }
+// console.log(result);
+
+//Давайте теперь реализуем функцию merge, параметрами принимающую произвольное количество массивов и сливающую их элементы в один массив.
+// function merge(...arrs){
+// 	return [].concat(...arrs);
+// }
+// let result = merge([1, 2, 3], [4, 5, 6], [7, 8, 9]);
+// console.log(result);
+
+
+
+
+
+/////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+//Пересечение произвольного количества массивов на JavaScript
+
+//напишем функцию getInt, которая будет находить пересечение любого количества массивов.
+// function inArray(elem, arr) {
+// 	return arr.indexOf(elem) !== -1;
+// }
+// function inArrays(elem, arrs) {
+// 	for (let arr of arrs) {
+// 		if (!inArray(elem, arr)) {
+// 			return false;
+// 		}
+// 	}
+// 	return true;
+// }
+// function getInt(...arrs){
+// 	let result = [];
+// 	let arr0 = arrs.shift();
+
+// 	for (let elem of arr0) {
+// 		if (inArrays(elem, arrs)) {
+// 			result.push(elem);
+// 		}
+// 	}
+// 	return result;
+// }
+
+// let result = getInt([1, 2, 3, -8], [-8, 2, 3, 4], [4, 3, -8, 2]);
+// console.log(result);
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+//Разность произвольного количества массивов на JavaScript
