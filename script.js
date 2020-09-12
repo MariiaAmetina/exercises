@@ -6279,3 +6279,93 @@ button6.addEventListener('click', function(){
 button6.addEventListener('dblclick', function(){
 	alert('2');
 });
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Именованные обработчики событий в JavaScript
+
+function func7() {
+	alert(7);
+}
+function func8() {
+	alert(8);
+}
+
+let button7 = document.querySelector('#button7');
+button7.addEventListener('click', func7);
+
+let button8 = document.querySelector('#button8');
+button8.addEventListener('mouseout', func8);
+
+
+
+
+
+
+/////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Привязывание одного обработчика ко многим элементам
+
+let elem10 = document.querySelector('#elem10');
+let elem20 = document.querySelector('#elem20');
+let elem30 = document.querySelector('#elem30');
+let elem40 = document.querySelector('#elem40');
+let elem50 = document.querySelector('#elem50');
+
+function func10() {
+	alert('message');
+}
+
+elem10.addEventListener('mouseover', func10);
+elem20.addEventListener('mouseover', func10);
+elem30.addEventListener('mouseover', func10);
+elem40.addEventListener('mouseover', func10);
+elem50.addEventListener('mouseover', func10);
+
+
+
+
+
+
+/////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Несколько обработчиков одного события в JavaScript
+
+function func11() {
+	alert('1');
+}
+
+function func21() {
+	alert('2');
+}
+
+function func31() {
+	alert('3');
+}
+
+let elem60 = document.querySelector('#elem60');
+elem60.addEventListener('click', func11);
+elem60.addEventListener('click', func21);
+elem60.addEventListener('click', func31);
+
+
+let button9 = document.querySelector('#button9');
+button9.addEventListener('dblclick', function(){
+	alert(123);
+});
+button9.addEventListener('dblclick', function(){
+	alert(456);
+});
+button9.addEventListener('dblclick', function(){
+	alert(789);
+});
