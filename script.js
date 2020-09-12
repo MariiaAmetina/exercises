@@ -6177,8 +6177,7 @@ console.log(users); */
 // 	console.log(height);
 // }
 
-let button = document.querySelector('#button');
-console.log(button);
+
 
 let elem1 = document.querySelector('#elem1');
 console.log(elem1);
@@ -6210,3 +6209,41 @@ console.log(firstClass);
 
 let elemClass = document.querySelector('.www');
 console.log(elemClass);
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//Привязывание обработчиков событий к элементам
+
+let button = document.querySelector('#button');
+button.addEventListener('click', function() {
+	alert('!!!');
+});
+
+
+let button1 = document.querySelector('#button1');
+button1.addEventListener('click', function(){
+	alert('Hey, number 1!');
+});
+
+
+let button2 = document.querySelector('#button2');
+button2.addEventListener('click', function(){
+	alert('You\'re extremely awesome!');
+});
+
+let button3 = document.querySelector('#button3');
+button3.addEventListener('click', function(){
+	alert('You got this!!!');
+});
