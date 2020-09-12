@@ -6247,3 +6247,35 @@ let button3 = document.querySelector('#button3');
 button3.addEventListener('click', function(){
 	alert('You got this!!!');
 });
+
+
+
+
+//Дана кнопка. По двойному клику по ней выведите на экран какое-нибудь сообщение.
+let button4 = document.querySelector('#button4');
+button4.addEventListener('dblclick', function(){
+	alert('You clicked this button twice :)');
+});
+
+
+
+//Дана кнопка. По наведению на нее выведите на экран какое-нибудь сообщение.
+let button5 = document.querySelector('#button5');
+button5.addEventListener('mouseover', function(){
+	alert('Cursor is over this button :)');
+});
+
+//Дана кнопка. По уходу курсора с нее выведите на экран какое-нибудь сообщение.
+button5.addEventListener('mouseout', function(){
+	alert('HEY, WHERE ARE YOU GOING ?!!!');
+});
+
+
+//Дана кнопка. По клику на нее выведите число 1, а по двойному клику - число 2.
+let button6 = document.querySelector('#button6');
+button6.addEventListener('click', function(){
+	alert('1');
+});
+button6.addEventListener('dblclick', function(){
+	alert('2');
+});
