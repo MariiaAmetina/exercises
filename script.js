@@ -6482,3 +6482,37 @@ let button19 = document.querySelector('#button19');
 button19.addEventListener('click', function(){
 	fat.innerHTML = '<b>' + fat.innerHTML + '</b>';
 });
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Работа с атрибутами тегов через свойства элементов
+
+//Дана также кнопка. По нажатию на кнопку выведите на экран содержимое атрибута type указанного выше инпута.
+
+let elemEmail = document.querySelector('#elemEmail');
+let button20 = document.querySelector('#button20');
+
+button20.addEventListener('click', function(){
+	alert(elemEmail.type);
+});
+
+
+//Дана также кнопка. По нажатию на кнопку выведите запишите в атрибут type значение submit.
+let elemEmail21 = document.querySelector('#elemEmail21');
+let button21 = document.querySelector('#button21');
+
+button21.addEventListener('click', function(){
+	elemEmail21.type = 'submit';
+})
+
+
+//3 Пусть у вас есть ссылка в виде тега a, кнопка и абзац. По нажатию на кнопку выведите в абзац содержимое атрибута href ссылки.
