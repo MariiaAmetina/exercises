@@ -6369,3 +6369,83 @@ button9.addEventListener('dblclick', function(){
 button9.addEventListener('dblclick', function(){
 	alert(789);
 });
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Работа с текстом тега на JavaScript
+
+let elementary = document.querySelector('#elementary');
+let button10 = document.querySelector('#button10');
+
+button10.addEventListener('click', function(){
+	alert(elementary.innerHTML);
+});
+
+
+
+//Даны два абзаца, содержащие своим текстом какие-то числа, и кнопка. По нажатию на кнопку выведите на экран сумму хранящихся чисел.
+let elementary1 = document.querySelector('#elementary1')
+let elementary2 = document.querySelector('#elementary2')
+let button11 = document.querySelector('#button11')
+
+button11.addEventListener('dblclick', function(){
+	alert(+elementary1.innerHTML + +elementary2.innerHTML);
+});
+
+
+//Даны два абзаца и две кнопки. Пусть нажатие на первую кнопку выводит текст первого абзаца, а нажатие на вторую кнопку - текст второго абзаца.
+let firstP = document.querySelector('#firstP');
+let secondP = document.querySelector('#secondP');
+let button12 = document.querySelector('#button12');
+let button13 = document.querySelector('#button13');
+
+button12.addEventListener('click', function(){
+	alert(firstP.innerHTML);
+});
+button13.addEventListener('click', function() {
+	alert(secondP.innerHTML);
+});
+
+
+
+
+
+//Дан абзац и две кнопки. По нажатию на первую кнопку запишите в абзац слово 'привет', а по нажатию на вторую кнопку - слово 'пока'.
+let privet = document.querySelector('#privet');
+let poka = document.querySelector('#poka');
+let button14 = document.querySelector('#button14');
+let button15 = document.querySelector('#button15');
+
+button14.addEventListener('click', function() {
+	privet.innerHTML = 'PRIVEEET';
+});
+button15.addEventListener('click', function(){
+	poka.innerHTML = 'POKAAA';
+});
+
+
+//Даны 3 абзаца с текстом. По нажатию на первый абзац запишите в его текст число 1, по нажатию на второй абзац запишите в его текст число 2, а по нажатию на третий - запишите в его текст число 3.
+let per = document.querySelector('#per');
+let vtor = document.querySelector('#vtor');
+let tre = document.querySelector('#tre');
+
+per.addEventListener('click', function(){
+	per.innerHTML = '1';
+});
+vtor.addEventListener('click', function(){
+	vtor.innerHTML = 2;
+});
+tre.addEventListener('click', function(){
+	tre.innerHTML = 3;
+});
+
+
+
+
+//Дан абзац и кнопка. В абзаце записано какое-то число. По нажатию на кнопку возведите значение абзаца в квадрат и запишите его обратно.
