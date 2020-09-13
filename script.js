@@ -6449,3 +6449,36 @@ tre.addEventListener('click', function(){
 
 
 //Дан абзац и кнопка. В абзаце записано какое-то число. По нажатию на кнопку возведите значение абзаца в квадрат и запишите его обратно.
+let number1 = document.querySelector('#number1');
+let button16 = document.querySelector('#button16');
+
+button16.addEventListener('click', function(){
+	number1.innerHTML = number1.innerHTML ** 2;
+});
+
+
+//Дан абзац с числом и кнопка. По нажатию на кнопку прибавьте к значению абзаца единицу и запишите полученное число обратно.
+let number2 = document.querySelector('#number2');
+let button17 = document.querySelector('#button17');
+
+button17.addEventListener('click', function(){
+	number2.innerHTML = +number2.innerHTML + 1;
+});
+
+
+//Дан абзац и кнопка. По нажатию на кнопку запишите в абзац текст '<i>hello</i>'.
+
+let hi = document.querySelector('#hi');
+let button18 = document.querySelector('#button18');
+button18.addEventListener('click', function(){
+	hi.innerHTML = '<i>hello</i>';
+});
+
+//Дан абзац с текстом и кнопка. По нажатию на кнопку прочитайте текст абзаца, оберните этот текст в теги <b> и запишите новый текст обратно в абзац.
+
+let fat = document.querySelector('#fat');
+let button19 = document.querySelector('#button19');
+
+button19.addEventListener('click', function(){
+	fat.innerHTML = '<b>' + fat.innerHTML + '</b>';
+});
