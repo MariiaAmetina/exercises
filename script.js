@@ -6516,3 +6516,24 @@ button21.addEventListener('click', function(){
 
 
 //3 Пусть у вас есть ссылка в виде тега a, кнопка и абзац. По нажатию на кнопку выведите в абзац содержимое атрибута href ссылки.
+let link = document.querySelector('#link');
+let button22 = document.querySelector('#button22');
+let linkB = document.querySelector('#linkB');
+
+button22.addEventListener('click', function(){
+	linkB.innerHTML = link.href;
+});
+
+
+//4 Пусть у вас есть ссылка и кнопка. По нажатию на кнопку добавьте в конец текста ссылки содержимое ее атрибута href в круглых скобках.
+
+let link23 = document.querySelector('#link23');
+let button23 = document.querySelector('#button23');
+
+button23.addEventListener('click', function(){
+	button23.value = button23.value + ' (' + link23.href + ')';
+});
+
+
+//5 Пусть у вас есть картинка. Разместите ее на странице в помощью тега img. Пусть даны также кнопка и абзац. Сделайте так, чтобы по клику на кнопку в абзац записался путь к картинки из ее атрибута src.
+
