@@ -6537,3 +6537,35 @@ button23.addEventListener('click', function(){
 
 //5 Пусть у вас есть картинка. Разместите ее на странице в помощью тега img. Пусть даны также кнопка и абзац. Сделайте так, чтобы по клику на кнопку в абзац записался путь к картинки из ее атрибута src.
 
+let palms = document.querySelector('#palms');
+let button24 = document.querySelector('#button24');
+let palmsP = document.querySelector('#palmsP');
+
+button24.addEventListener('click', function(){
+	palmsP.innerHTML = palms.src;
+});
+
+
+//6 Дана картинка в теге img и кнопка. По нажатию на кнопку в атрибут width запишите значение 300.
+
+let house = document.querySelector('#house');
+let button25 = document.querySelector('#button25');
+
+button25.addEventListener('click', function(){
+	house.width = house.width * 2;
+});
+
+
+//8 Пусть у вас есть две картинки. Сделайте на странице тег img и две кнопки. По нажатию на первую кнопку запишите в атрибут src путь к первой картинке, а по нажатию на вторую - путь ко второй картинке.
+
+let meWa = document.querySelector('#meWa');
+let meMo = document.querySelector('#meMo');
+let meWa26 = document.querySelector('#meWa26');
+let meMo27 = document.querySelector('#meMo27');
+
+meWa26.addEventListener('click', function(){
+	meWa.src = 'img/20180805_123845_0.jpg';
+});
+meMo27.addEventListener('click', function(){
+	meMo.src = 'img/IMG_4003.JPG';
+});
