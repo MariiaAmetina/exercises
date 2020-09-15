@@ -6569,3 +6569,57 @@ meWa26.addEventListener('click', function(){
 meMo27.addEventListener('click', function(){
 	meMo.src = 'img/IMG_4003.JPG';
 });
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//Работа с текстовыми полями в JavaScript
+
+
+//1 Сделайте кнопку, нажатие на которую будет выводить текущий текст инпута. После захода на страницу нажмите на кнопку, чтобы увидеть текущий текст инпута, затем поредактируйте текст в инпуте и еще раз нажмите на кнопку. Убедитесь в том, что выведется новый текст инпута.
+
+let elem111 = document.querySelector('#elem111');
+let button28 = document.querySelector('#button28');
+
+button28.addEventListener('click', function(){
+	alert(elem111.value);
+});
+
+
+//2 Дан инпут и кнопка. По нажатию на кнопку запишите в инпут какой-нибудь текст.
+let elem29 = document.querySelector('#elem29');
+let button29 = document.querySelector('#button29');
+
+button29.addEventListener('click', function() {
+	elem29.value = 'вы нажали на кнопку и добавили текст в инпут';
+});
+
+
+
+//3 Дан инпут, абзац и кнопка. По нажатию на кнопку запишите в абзац текст из инпута.
+
+let elem300 = document.querySelector('#elem300');
+let button30 = document.querySelector('#button30');
+let text30 = document.querySelector('#text30');
+
+button30.addEventListener('click', function(){
+	text30.innerHTML = elem300.value;
+});
+
+
+//4 Даны два инпута и кнопка. В первый инпут пользователем вводится число. По нажатию на кнопку запишите во второй инпут квадрат введенного числа.
+let elem31 = document.querySelector('#elem31');
+let elem31W = document.querySelector('#elem31W');
+let button31 = document.querySelector('#button31');
+
+button31.addEventListener('click', function(){
+	elem31W.value = elem31.value ** 2;
+});
