@@ -6637,3 +6637,39 @@ button32.addEventListener("click", function() {
 	elem32.value = elem33.value;
 	elem33.value = current;
 });
+
+//6 Даны два инпута и кнопка. В первый инпут пользователем вводится число. По нажатию на кнопку запишите во второй инпут квадрат введенного числа.
+
+let elem34 = document.querySelector('#elem34');
+let elem34a = document.querySelector('#elem34a');
+let button34 = document.querySelector('#button34');
+
+button34.addEventListener('click', function() {
+	elem34a.value = elem34.value ** 2;
+});
+
+
+//7 Даны 5 инпутов, абзац и кнопка. В инпут вводятся числа. По нажатию на кнопку запишите среднее арифметическое введенных чисел в абзац.
+
+let elem35 = document.querySelector('#elem35');
+let elem36 = document.querySelector('#elem36');
+let elem37 = document.querySelector('#elem37');
+let elem38 = document.querySelector('#elem38');
+let elem39 = document.querySelector('#elem39');
+let button39 = document.querySelector('#button39');
+let p39 = document.querySelector('.p39');
+
+button39.addEventListener('click', function(){
+	p39.innerHTML = (+elem35.value + +elem36.value + +elem37.value +
+		+elem38.value + +elem39.value) / 5;
+});
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+//Фокус текстовых полей в JavaScript
