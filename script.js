@@ -6623,3 +6623,17 @@ let button31 = document.querySelector('#button31');
 button31.addEventListener('click', function(){
 	elem31W.value = elem31.value ** 2;
 });
+
+
+
+//5 Даны два инпута и кнопка. По нажатию на кнопку запишите в первый инпут значение второго инпута, а во второй инпут - значение первого. Ваш код должен работать универсально, для любых значений инпутов.
+
+let elem32 = document.querySelector('#elem32');
+let elem33 = document.querySelector('#elem33');
+let button32 = document.querySelector('#button32');
+
+button32.addEventListener("click", function() {
+	let current = elem32.value;
+	elem32.value = elem33.value;
+	elem33.value = current;
+});
