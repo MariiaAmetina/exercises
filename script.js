@@ -6895,3 +6895,18 @@ function func62(){
 		this.removeEventListener('click', func62);
 	}
 }
+
+
+///////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//Отвязывание обработчиков событий в цикле
+
+let abz = document.querySelectorAll('.abz');
+for (let elem of abz) {
+	elem.addEventListener('click', abzFunc);
+}
+
+function abzFunc(){
+	this.innerHTML = this.innerHTML + '!';
+	this.removeEventListener('click', abzFunc);
+}
