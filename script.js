@@ -6695,3 +6695,41 @@ let elem42 = document.querySelector('#elem42');
 elem42.addEventListener('focus', function(){
 	elem42.value = '';
 });
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//Исключения при работе с атрибутами в JavaScript
+
+
+//По нажатию на кнопку прочитайте и выведите на экран значение атрибута class нашего дива.
+let elem43 = document.querySelector('#elem43');
+let button43 = document.querySelector('#button43');
+button43.addEventListener('click', function(){
+	alert(elem43.className);
+});
+
+
+
+//По нажатию на кнопку запишите в атрибут class нашего дива какой-нибудь класс.
+let elem44 = document.querySelector('#elem44');
+let button44 = document.querySelector('#button44');
+button44.addEventListener('click', function(){
+	elem44.className = 'newClass';
+	console.log(elem44.className);
+});
+
+
+//По нажатию на кнопку получите массив CSS классов нашего дива.
+let elem45 = document.querySelector('#elem45');
+let button45 = document.querySelector('#button45');
+button45.addEventListener('click', function(){
+	let arr = [];
+	arr = elem45.className.split(' ');
+	console.log(arr);
+});
