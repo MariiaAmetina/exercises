@@ -6797,3 +6797,47 @@ function func54() {
 elem52.addEventListener('blur', func54);
 elem53.addEventListener('blur', func54);
 elem54.addEventListener('blur', func54);
+
+
+
+
+///////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//Получение группы элементов
+
+//1 Даны абзацы и кнопка. По нажатию на кнопку найдите все абзацы, переберите из циклом и установите текст каждого абзаца в значение text.
+
+let texts = document.querySelectorAll('.text55');
+let button55 = document.querySelector('#button55');
+
+button55.addEventListener('click', function(){
+	for (let elem of texts) {
+		elem.innerHTML = 'text';
+	}
+});
+
+
+//2 Даны абзацы с текстом и кнопка. По нажатию на кнопку запишите в конец текста каждого абзаца его порядковый номер
+let text56 = document.querySelectorAll('.text56');
+let button56 = document.querySelector('#button56');
+
+button56.addEventListener('click', function(){
+	let n = 0;
+	for (elem of text56) {
+		elem.innerHTML = elem.innerHTML + ' - ' + ++n;
+	}
+});
+
+
+//3 Даны инпуты с числами, абзац и кнопка. По нажатию на кнопку найдите сумму чисел из инпутов и запишите эту сумму в текст абзаца.
+let text57 = document.querySelectorAll('.text57');
+let button57 = document.querySelector('#button57');
+let result57 = document.querySelector('#result57');
+
+button57.addEventListener('click', function(){
+	let sum = 0;
+	for (let elem of text57) {
+		sum += +elem.value;
+	}
+	result57.innerHTML = sum;
+});
