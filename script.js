@@ -6910,3 +6910,17 @@ function abzFunc(){
 	this.innerHTML = this.innerHTML + '!';
 	this.removeEventListener('click', abzFunc);
 }
+
+
+
+///////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//Отвязывание анонимных функций в JavaScript
+let elems = document.querySelectorAll('p');
+
+for (let elem of elems) {
+	elem.addEventListener('click', function func() {
+		alert(this.innerHTML);
+		this.removeEventListener('click', func); // отвязываем функцию
+	});
+}
