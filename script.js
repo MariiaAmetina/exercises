@@ -6745,4 +6745,55 @@ button45.addEventListener('click', function(){
 //<img id="image" src="avatar.png">
 //let image = document.querySelector('#image');
 //console.log(image.src);
-console.log(document.querySelector('#image').src);
+//console.log(document.querySelector('#image').src);
+
+
+
+///////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//Объект this в JavaScript
+
+//Дан инпут. По получению фокуса этим инпутом запишите в него число 1, а по потери фокуса - число 2. Для обращения у инпуту внутри функции-обработчика используйте объект this.
+let elem46 = document.querySelector('#elem46');
+elem46.addEventListener('focus', function(){
+	this.value = 1;
+});
+elem46.addEventListener('blur', func46);
+function func46() {
+	this.value = 2;
+}
+
+
+//Дана кнопка, значением которой служит число 1. Сделайте так, чтобы по клику на эту кнопку ее значение каждый раз увеличивалось на единицу.
+let button47 = document.querySelector('#button47');
+button47.addEventListener('click', func47);
+function func47() {
+	this.value = +this.value + 1;
+}
+
+//Даны 5 абзацев с какими-то текстами. По клику на любой абзац запишите в конец его текста восклицательный знак.
+let elem48 = document.querySelector('#elem48');
+let elem49 = document.querySelector('#elem49');
+let elem51 = document.querySelector('#elem51');
+
+function func51 () {
+	this.innerHTML += '!';
+}
+
+elem48.addEventListener('click', func51);
+elem49.addEventListener('click', func51);
+elem51.addEventListener('click', func51);
+
+
+//Даны 3 инпута, в которых записаны какие-то числа. По потери фокуса в любом из инпутов возведите стоящее в нем число в квадрат.
+let elem52 = document.querySelector('#elem52');
+let elem53 = document.querySelector('#elem53');
+let elem54 = document.querySelector('#elem54');
+
+function func54() {
+	this.value **= 2;
+}
+
+elem52.addEventListener('blur', func54);
+elem53.addEventListener('blur', func54);
+elem54.addEventListener('blur', func54);
