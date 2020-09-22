@@ -6841,3 +6841,30 @@ button57.addEventListener('click', function(){
 	}
 	result57.innerHTML = sum;
 });
+
+
+
+
+///////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//Добавление обработчиков событий в цикле
+
+
+function func58() {
+	this.value = Number(this.value) + 1;
+}
+//1 Даны также инпуты. Сделайте так, чтобы по потери фокуса в любом из наших инпутов выполнялась приведенная выше функция.
+let inputs = document.querySelectorAll('input');
+for (let elem of inputs) {
+	elem.addEventListener('blur', func58);
+}
+
+
+//2 Даны абзацы с числами. Сделайте так, чтобы по клику на любой абзац его число в нем возводилось в квадрат.
+let ps = document.querySelectorAll('p');
+for (let elem of ps) {
+	elem.addEventListener('click', func59);
+}
+function func59() {
+	this.innerHTML **= 2;
+}
