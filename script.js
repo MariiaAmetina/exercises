@@ -6868,3 +6868,30 @@ for (let elem of ps) {
 function func59() {
 	this.innerHTML **= 2;
 }
+
+
+
+
+///////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//Отвязывание событий через removeEventListener
+
+//1 Дана ссылка. По нажатию на эту ссылку добавьте в конец ее текста содержимое ее атрибута href в круглых скобках. Сделайте так, чтобы это добавление происходило лишь по первому нажатию.
+let link61 = document.querySelector('#link61');
+link61.addEventListener('click', func61);
+
+function func61() {
+	link61.innerHTML = link61.innerHTML + ' (' + link61.href + ')';
+	this.removeEventListener('click', func61);
+}
+
+
+//2 Дана кнопка, значением которой служит число 1. Сделайте так, чтобы по клику на эту кнопку ее значение каждый раз увеличивалось на единицу. После того, как значение кнопки достигнет 10 - отвяжите обработчик события, чтобы кнопка больше не реагировала на нажатие.
+let button62 = document.querySelector('#button62');
+button62.addEventListener('click', func62);
+function func62(){
+	this.value++;
+	if (this.value == 10) {
+		this.removeEventListener('click', func62);
+	}
+}
