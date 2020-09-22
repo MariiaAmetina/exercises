@@ -6733,3 +6733,16 @@ button45.addEventListener('click', function(){
 	arr = elem45.className.split(' ');
 	console.log(arr);
 });
+
+
+
+
+///////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//Цепочки методов и свойств в JavaScript
+
+//Переделайте приведенный выше код так, чтобы вместо введения переменной image использовалась цепочка.
+//<img id="image" src="avatar.png">
+//let image = document.querySelector('#image');
+//console.log(image.src);
+console.log(document.querySelector('#image').src);
