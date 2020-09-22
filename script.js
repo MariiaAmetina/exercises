@@ -6673,3 +6673,25 @@ button39.addEventListener('click', function(){
 ///////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
 //Фокус текстовых полей в JavaScript
+
+//Дан инпут. По получению фокуса запишите в него число 1, а по потери фокуса - число 2.
+let elem400 = document.querySelector('#elem400');
+elem400.addEventListener('focus', function() {
+	elem400.value = 1;
+});
+elem400.addEventListener('blur', function(){
+	elem400.value = 2;
+});
+
+
+//Дан инпут. Пусть в него вводится число. По потери фокуса выведите на экран квадрат этого числа.
+let elem41 = document.querySelector('#elem41');
+elem41.addEventListener('blur', function(){
+	elem41.value = elem41.value ** 2;
+});
+
+//Дан инпут, в котором изначально есть какой-то текст. По получению фокуса инпутом очистите содержимое этого инпута.
+let elem42 = document.querySelector('#elem42');
+elem42.addEventListener('focus', function(){
+	elem42.value = '';
+});
