@@ -6179,38 +6179,36 @@ console.log(users); */
 
 
 
-let elem1 = document.querySelector('#elem1');
-console.log(elem1);
+// let elem1 = document.querySelector('#elem1');
+// console.log(elem1);
 
-let elem2 = document.querySelector('#elem2');
-console.log(elem2);
+// let elem2 = document.querySelector('#elem2');
+// console.log(elem2);
 
-let elem3 = document.querySelector('#elem3');
-console.log(elem3);
-
-
-let elem = document.querySelector('#parent input');
-console.log(elem);
+// let elem3 = document.querySelector('#elem3');
+// console.log(elem3);
 
 
-let element = document.querySelector('.elem');
-console.log(element);
+// let elem = document.querySelector('#parent input');
+// console.log(elem);
 
 
-let firstElem = document.querySelector('#block p');
-console.log(firstElem);
+// let element = document.querySelector('.elem');
+// console.log(element);
 
 
-
-let firstClass = document.querySelector('.block p');
-console.log(firstClass);
+// let firstElem = document.querySelector('#block p');
+// console.log(firstElem);
 
 
 
-let elemClass = document.querySelector('.www');
-console.log(elemClass);
+// let firstClass = document.querySelector('.block p');
+// console.log(firstClass);
 
 
+
+// let elemClass = document.querySelector('.www');
+// console.log(elemClass);
 
 
 
@@ -6222,734 +6220,763 @@ console.log(elemClass);
 
 
 
+
+
+// //////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////
+// //Привязывание обработчиков событий к элементам
+
+// let button = document.querySelector('#button');
+// button.addEventListener('click', function() {
+// 	alert('!!!');
+// });
+
+
+// let button1 = document.querySelector('#button1');
+// button1.addEventListener('click', function(){
+// 	alert('Hey, number 1!');
+// });
+
+
+// let button2 = document.querySelector('#button2');
+// button2.addEventListener('click', function(){
+// 	alert('You\'re extremely awesome!');
+// });
+
+// let button3 = document.querySelector('#button3');
+// button3.addEventListener('click', function(){
+// 	alert('You got this!!!');
+// });
+
+
+
+
+// //Дана кнопка. По двойному клику по ней выведите на экран какое-нибудь сообщение.
+// let button4 = document.querySelector('#button4');
+// button4.addEventListener('dblclick', function(){
+// 	alert('You clicked this button twice :)');
+// });
+
+
+
+// //Дана кнопка. По наведению на нее выведите на экран какое-нибудь сообщение.
+// let button5 = document.querySelector('#button5');
+// button5.addEventListener('mouseover', function(){
+// 	alert('Cursor is over this button :)');
+// });
+
+// //Дана кнопка. По уходу курсора с нее выведите на экран какое-нибудь сообщение.
+// button5.addEventListener('mouseout', function(){
+// 	alert('HEY, WHERE ARE YOU GOING ?!!!');
+// });
+
+
+// //Дана кнопка. По клику на нее выведите число 1, а по двойному клику - число 2.
+// let button6 = document.querySelector('#button6');
+// button6.addEventListener('click', function(){
+// 	alert('1');
+// });
+// button6.addEventListener('dblclick', function(){
+// 	alert('2');
+// });
+
+
+
+
+
+
+
+
+
+
+
+// /////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////
+// //Именованные обработчики событий в JavaScript
+
+// function func7() {
+// 	alert(7);
+// }
+// function func8() {
+// 	alert(8);
+// }
+
+// let button7 = document.querySelector('#button7');
+// button7.addEventListener('click', func7);
+
+// let button8 = document.querySelector('#button8');
+// button8.addEventListener('mouseout', func8);
+
+
+
+
+
+
+// /////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////
+// //Привязывание одного обработчика ко многим элементам
+
+// let elem10 = document.querySelector('#elem10');
+// let elem20 = document.querySelector('#elem20');
+// let elem30 = document.querySelector('#elem30');
+// let elem40 = document.querySelector('#elem40');
+// let elem50 = document.querySelector('#elem50');
+
+// function func10() {
+// 	alert('message');
+// }
+
+// elem10.addEventListener('mouseover', func10);
+// elem20.addEventListener('mouseover', func10);
+// elem30.addEventListener('mouseover', func10);
+// elem40.addEventListener('mouseover', func10);
+// elem50.addEventListener('mouseover', func10);
+
+
+
+
+
+
+// /////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////
+// //Несколько обработчиков одного события в JavaScript
+
+// function func11() {
+// 	alert('1');
+// }
+
+// function func21() {
+// 	alert('2');
+// }
+
+// function func31() {
+// 	alert('3');
+// }
+
+// let elem60 = document.querySelector('#elem60');
+// elem60.addEventListener('click', func11);
+// elem60.addEventListener('click', func21);
+// elem60.addEventListener('click', func31);
+
+
+// let button9 = document.querySelector('#button9');
+// button9.addEventListener('dblclick', function(){
+// 	alert(123);
+// });
+// button9.addEventListener('dblclick', function(){
+// 	alert(456);
+// });
+// button9.addEventListener('dblclick', function(){
+// 	alert(789);
+// });
+
+
+
+
+
+
+
+// ////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////
+// //Работа с текстом тега на JavaScript
+
+// let elementary = document.querySelector('#elementary');
+// let button10 = document.querySelector('#button10');
+
+// button10.addEventListener('click', function(){
+// 	alert(elementary.innerHTML);
+// });
+
+
+
+// //Даны два абзаца, содержащие своим текстом какие-то числа, и кнопка. По нажатию на кнопку выведите на экран сумму хранящихся чисел.
+// let elementary1 = document.querySelector('#elementary1')
+// let elementary2 = document.querySelector('#elementary2')
+// let button11 = document.querySelector('#button11')
+
+// button11.addEventListener('dblclick', function(){
+// 	alert(+elementary1.innerHTML + +elementary2.innerHTML);
+// });
+
+
+// //Даны два абзаца и две кнопки. Пусть нажатие на первую кнопку выводит текст первого абзаца, а нажатие на вторую кнопку - текст второго абзаца.
+// let firstP = document.querySelector('#firstP');
+// let secondP = document.querySelector('#secondP');
+// let button12 = document.querySelector('#button12');
+// let button13 = document.querySelector('#button13');
+
+// button12.addEventListener('click', function(){
+// 	alert(firstP.innerHTML);
+// });
+// button13.addEventListener('click', function() {
+// 	alert(secondP.innerHTML);
+// });
+
+
+
+
+
+// //Дан абзац и две кнопки. По нажатию на первую кнопку запишите в абзац слово 'привет', а по нажатию на вторую кнопку - слово 'пока'.
+// let privet = document.querySelector('#privet');
+// let poka = document.querySelector('#poka');
+// let button14 = document.querySelector('#button14');
+// let button15 = document.querySelector('#button15');
+
+// button14.addEventListener('click', function() {
+// 	privet.innerHTML = 'PRIVEEET';
+// });
+// button15.addEventListener('click', function(){
+// 	poka.innerHTML = 'POKAAA';
+// });
+
+
+// //Даны 3 абзаца с текстом. По нажатию на первый абзац запишите в его текст число 1, по нажатию на второй абзац запишите в его текст число 2, а по нажатию на третий - запишите в его текст число 3.
+// let per = document.querySelector('#per');
+// let vtor = document.querySelector('#vtor');
+// let tre = document.querySelector('#tre');
+
+// per.addEventListener('click', function(){
+// 	per.innerHTML = '1';
+// });
+// vtor.addEventListener('click', function(){
+// 	vtor.innerHTML = 2;
+// });
+// tre.addEventListener('click', function(){
+// 	tre.innerHTML = 3;
+// });
+
+
+
+
+// //Дан абзац и кнопка. В абзаце записано какое-то число. По нажатию на кнопку возведите значение абзаца в квадрат и запишите его обратно.
+// let number1 = document.querySelector('#number1');
+// let button16 = document.querySelector('#button16');
+
+// button16.addEventListener('click', function(){
+// 	number1.innerHTML = number1.innerHTML ** 2;
+// });
+
+
+// //Дан абзац с числом и кнопка. По нажатию на кнопку прибавьте к значению абзаца единицу и запишите полученное число обратно.
+// let number2 = document.querySelector('#number2');
+// let button17 = document.querySelector('#button17');
+
+// button17.addEventListener('click', function(){
+// 	number2.innerHTML = +number2.innerHTML + 1;
+// });
+
+
+// //Дан абзац и кнопка. По нажатию на кнопку запишите в абзац текст '<i>hello</i>'.
+
+// let hi = document.querySelector('#hi');
+// let button18 = document.querySelector('#button18');
+// button18.addEventListener('click', function(){
+// 	hi.innerHTML = '<i>hello</i>';
+// });
+
+// //Дан абзац с текстом и кнопка. По нажатию на кнопку прочитайте текст абзаца, оберните этот текст в теги <b> и запишите новый текст обратно в абзац.
+
+// let fat = document.querySelector('#fat');
+// let button19 = document.querySelector('#button19');
+
+// button19.addEventListener('click', function(){
+// 	fat.innerHTML = '<b>' + fat.innerHTML + '</b>';
+// });
+
+
+
+
+
+
+
+
+
+
+// ///////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////
+// //Работа с атрибутами тегов через свойства элементов
+
+// //Дана также кнопка. По нажатию на кнопку выведите на экран содержимое атрибута type указанного выше инпута.
+
+// let elemEmail = document.querySelector('#elemEmail');
+// let button20 = document.querySelector('#button20');
+
+// button20.addEventListener('click', function(){
+// 	alert(elemEmail.type);
+// });
+
+
+// //Дана также кнопка. По нажатию на кнопку выведите запишите в атрибут type значение submit.
+// let elemEmail21 = document.querySelector('#elemEmail21');
+// let button21 = document.querySelector('#button21');
+
+// button21.addEventListener('click', function(){
+// 	elemEmail21.type = 'submit';
+// })
+
+
+// //3 Пусть у вас есть ссылка в виде тега a, кнопка и абзац. По нажатию на кнопку выведите в абзац содержимое атрибута href ссылки.
+// let link = document.querySelector('#link');
+// let button22 = document.querySelector('#button22');
+// let linkB = document.querySelector('#linkB');
+
+// button22.addEventListener('click', function(){
+// 	linkB.innerHTML = link.href;
+// });
+
+
+// //4 Пусть у вас есть ссылка и кнопка. По нажатию на кнопку добавьте в конец текста ссылки содержимое ее атрибута href в круглых скобках.
+
+// let link23 = document.querySelector('#link23');
+// let button23 = document.querySelector('#button23');
+
+// button23.addEventListener('click', function(){
+// 	button23.value = button23.value + ' (' + link23.href + ')';
+// });
+
+
+// //5 Пусть у вас есть картинка. Разместите ее на странице в помощью тега img. Пусть даны также кнопка и абзац. Сделайте так, чтобы по клику на кнопку в абзац записался путь к картинки из ее атрибута src.
+
+// let palms = document.querySelector('#palms');
+// let button24 = document.querySelector('#button24');
+// let palmsP = document.querySelector('#palmsP');
+
+// button24.addEventListener('click', function(){
+// 	palmsP.innerHTML = palms.src;
+// });
+
+
+// //6 Дана картинка в теге img и кнопка. По нажатию на кнопку в атрибут width запишите значение 300.
+
+// let house = document.querySelector('#house');
+// let button25 = document.querySelector('#button25');
+
+// button25.addEventListener('click', function(){
+// 	house.width = house.width * 2;
+// });
+
+
+// //8 Пусть у вас есть две картинки. Сделайте на странице тег img и две кнопки. По нажатию на первую кнопку запишите в атрибут src путь к первой картинке, а по нажатию на вторую - путь ко второй картинке.
+
+// let meWa = document.querySelector('#meWa');
+// let meMo = document.querySelector('#meMo');
+// let meWa26 = document.querySelector('#meWa26');
+// let meMo27 = document.querySelector('#meMo27');
+
+// meWa26.addEventListener('click', function(){
+// 	meWa.src = 'img/20180805_123845_0.jpg';
+// });
+// meMo27.addEventListener('click', function(){
+// 	meMo.src = 'img/IMG_4003.JPG';
+// });
+
+
+
+
+
+
+
+
+
+
+// ////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////
+// //Работа с текстовыми полями в JavaScript
+
+
+// //1 Сделайте кнопку, нажатие на которую будет выводить текущий текст инпута. После захода на страницу нажмите на кнопку, чтобы увидеть текущий текст инпута, затем поредактируйте текст в инпуте и еще раз нажмите на кнопку. Убедитесь в том, что выведется новый текст инпута.
+
+// let elem111 = document.querySelector('#elem111');
+// let button28 = document.querySelector('#button28');
+
+// button28.addEventListener('click', function(){
+// 	alert(elem111.value);
+// });
+
+
+// //2 Дан инпут и кнопка. По нажатию на кнопку запишите в инпут какой-нибудь текст.
+// let elem29 = document.querySelector('#elem29');
+// let button29 = document.querySelector('#button29');
+
+// button29.addEventListener('click', function() {
+// 	elem29.value = 'вы нажали на кнопку и добавили текст в инпут';
+// });
+
+
+
+// //3 Дан инпут, абзац и кнопка. По нажатию на кнопку запишите в абзац текст из инпута.
+
+// let elem300 = document.querySelector('#elem300');
+// let button30 = document.querySelector('#button30');
+// let text30 = document.querySelector('#text30');
+
+// button30.addEventListener('click', function(){
+// 	text30.innerHTML = elem300.value;
+// });
+
+
+// //4 Даны два инпута и кнопка. В первый инпут пользователем вводится число. По нажатию на кнопку запишите во второй инпут квадрат введенного числа.
+// let elem31 = document.querySelector('#elem31');
+// let elem31W = document.querySelector('#elem31W');
+// let button31 = document.querySelector('#button31');
+
+// button31.addEventListener('click', function(){
+// 	elem31W.value = elem31.value ** 2;
+// });
+
+
+
+// //5 Даны два инпута и кнопка. По нажатию на кнопку запишите в первый инпут значение второго инпута, а во второй инпут - значение первого. Ваш код должен работать универсально, для любых значений инпутов.
+
+// let elem32 = document.querySelector('#elem32');
+// let elem33 = document.querySelector('#elem33');
+// let button32 = document.querySelector('#button32');
+
+// button32.addEventListener("click", function() {
+// 	let current = elem32.value;
+// 	elem32.value = elem33.value;
+// 	elem33.value = current;
+// });
+
+// //6 Даны два инпута и кнопка. В первый инпут пользователем вводится число. По нажатию на кнопку запишите во второй инпут квадрат введенного числа.
+
+// let elem34 = document.querySelector('#elem34');
+// let elem34a = document.querySelector('#elem34a');
+// let button34 = document.querySelector('#button34');
+
+// button34.addEventListener('click', function() {
+// 	elem34a.value = elem34.value ** 2;
+// });
+
+
+// //7 Даны 5 инпутов, абзац и кнопка. В инпут вводятся числа. По нажатию на кнопку запишите среднее арифметическое введенных чисел в абзац.
+
+// let elem35 = document.querySelector('#elem35');
+// let elem36 = document.querySelector('#elem36');
+// let elem37 = document.querySelector('#elem37');
+// let elem38 = document.querySelector('#elem38');
+// let elem39 = document.querySelector('#elem39');
+// let button39 = document.querySelector('#button39');
+// let p39 = document.querySelector('.p39');
+
+// button39.addEventListener('click', function(){
+// 	p39.innerHTML = (+elem35.value + +elem36.value + +elem37.value +
+// 		+elem38.value + +elem39.value) / 5;
+// });
+
+
+
+
+
+
+
+// ///////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////
+// //Фокус текстовых полей в JavaScript
+
+// //Дан инпут. По получению фокуса запишите в него число 1, а по потери фокуса - число 2.
+// let elem400 = document.querySelector('#elem400');
+// elem400.addEventListener('focus', function() {
+// 	elem400.value = 1;
+// });
+// elem400.addEventListener('blur', function(){
+// 	elem400.value = 2;
+// });
+
+
+// //Дан инпут. Пусть в него вводится число. По потери фокуса выведите на экран квадрат этого числа.
+// let elem41 = document.querySelector('#elem41');
+// elem41.addEventListener('blur', function(){
+// 	elem41.value = elem41.value ** 2;
+// });
+
+// //Дан инпут, в котором изначально есть какой-то текст. По получению фокуса инпутом очистите содержимое этого инпута.
+// let elem42 = document.querySelector('#elem42');
+// elem42.addEventListener('focus', function(){
+// 	elem42.value = '';
+// });
+
+
+
+
+
+
+
+// ///////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////
+// //Исключения при работе с атрибутами в JavaScript
+
+
+// //По нажатию на кнопку прочитайте и выведите на экран значение атрибута class нашего дива.
+// let elem43 = document.querySelector('#elem43');
+// let button43 = document.querySelector('#button43');
+// button43.addEventListener('click', function(){
+// 	alert(elem43.className);
+// });
+
+
+
+// //По нажатию на кнопку запишите в атрибут class нашего дива какой-нибудь класс.
+// let elem44 = document.querySelector('#elem44');
+// let button44 = document.querySelector('#button44');
+// button44.addEventListener('click', function(){
+// 	elem44.className = 'newClass';
+// 	console.log(elem44.className);
+// });
+
+
+// //По нажатию на кнопку получите массив CSS классов нашего дива.
+// let elem45 = document.querySelector('#elem45');
+// let button45 = document.querySelector('#button45');
+// button45.addEventListener('click', function(){
+// 	let arr = [];
+// 	arr = elem45.className.split(' ');
+// 	console.log(arr);
+// });
+
+
+
+
+// ///////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////
+// //Цепочки методов и свойств в JavaScript
+
+// //Переделайте приведенный выше код так, чтобы вместо введения переменной image использовалась цепочка.
+// //<img id="image" src="avatar.png">
+// //let image = document.querySelector('#image');
+// //console.log(image.src);
+// //console.log(document.querySelector('#image').src);
+
+
+
+// ///////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////
+// //Объект this в JavaScript
+
+// //Дан инпут. По получению фокуса этим инпутом запишите в него число 1, а по потери фокуса - число 2. Для обращения у инпуту внутри функции-обработчика используйте объект this.
+// let elem46 = document.querySelector('#elem46');
+// elem46.addEventListener('focus', function(){
+// 	this.value = 1;
+// });
+// elem46.addEventListener('blur', func46);
+// function func46() {
+// 	this.value = 2;
+// }
+
+
+// //Дана кнопка, значением которой служит число 1. Сделайте так, чтобы по клику на эту кнопку ее значение каждый раз увеличивалось на единицу.
+// let button47 = document.querySelector('#button47');
+// button47.addEventListener('click', func47);
+// function func47() {
+// 	this.value = +this.value + 1;
+// }
+
+// //Даны 5 абзацев с какими-то текстами. По клику на любой абзац запишите в конец его текста восклицательный знак.
+// let elem48 = document.querySelector('#elem48');
+// let elem49 = document.querySelector('#elem49');
+// let elem51 = document.querySelector('#elem51');
+
+// function func51 () {
+// 	this.innerHTML += '!';
+// }
+
+// elem48.addEventListener('click', func51);
+// elem49.addEventListener('click', func51);
+// elem51.addEventListener('click', func51);
+
+
+// //Даны 3 инпута, в которых записаны какие-то числа. По потери фокуса в любом из инпутов возведите стоящее в нем число в квадрат.
+// let elem52 = document.querySelector('#elem52');
+// let elem53 = document.querySelector('#elem53');
+// let elem54 = document.querySelector('#elem54');
+
+// function func54() {
+// 	this.value **= 2;
+// }
+
+// elem52.addEventListener('blur', func54);
+// elem53.addEventListener('blur', func54);
+// elem54.addEventListener('blur', func54);
+
+
+
+
+// ///////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////
+// //Получение группы элементов
+
+// //1 Даны абзацы и кнопка. По нажатию на кнопку найдите все абзацы, переберите из циклом и установите текст каждого абзаца в значение text.
+
+// let texts = document.querySelectorAll('.text55');
+// let button55 = document.querySelector('#button55');
+
+// button55.addEventListener('click', function(){
+// 	for (let elem of texts) {
+// 		elem.innerHTML = 'text';
+// 	}
+// });
+
+
+// //2 Даны абзацы с текстом и кнопка. По нажатию на кнопку запишите в конец текста каждого абзаца его порядковый номер
+// let text56 = document.querySelectorAll('.text56');
+// let button56 = document.querySelector('#button56');
+
+// button56.addEventListener('click', function(){
+// 	let n = 0;
+// 	for (elem of text56) {
+// 		elem.innerHTML = elem.innerHTML + ' - ' + ++n;
+// 	}
+// });
+
+
+// //3 Даны инпуты с числами, абзац и кнопка. По нажатию на кнопку найдите сумму чисел из инпутов и запишите эту сумму в текст абзаца.
+// let text57 = document.querySelectorAll('.text57');
+// let button57 = document.querySelector('#button57');
+// let result57 = document.querySelector('#result57');
+
+// button57.addEventListener('click', function(){
+// 	let sum = 0;
+// 	for (let elem of text57) {
+// 		sum += +elem.value;
+// 	}
+// 	result57.innerHTML = sum;
+// });
+
+
+
+
+// ///////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////
+// //Добавление обработчиков событий в цикле
+
+
+// function func58() {
+// 	this.value = Number(this.value) + 1;
+// }
+// //1 Даны также инпуты. Сделайте так, чтобы по потери фокуса в любом из наших инпутов выполнялась приведенная выше функция.
+// let inputs = document.querySelectorAll('input');
+// for (let elem of inputs) {
+// 	elem.addEventListener('blur', func58);
+// }
+
+
+// //2 Даны абзацы с числами. Сделайте так, чтобы по клику на любой абзац его число в нем возводилось в квадрат.
+// let ps = document.querySelectorAll('p');
+// for (let elem of ps) {
+// 	elem.addEventListener('click', func59);
+// }
+// function func59() {
+// 	this.innerHTML **= 2;
+// }
+
+
+
+
+// ///////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////
+// //Отвязывание событий через removeEventListener
+
+// //1 Дана ссылка. По нажатию на эту ссылку добавьте в конец ее текста содержимое ее атрибута href в круглых скобках. Сделайте так, чтобы это добавление происходило лишь по первому нажатию.
+// let link61 = document.querySelector('#link61');
+// link61.addEventListener('click', func61);
+
+// function func61() {
+// 	link61.innerHTML = link61.innerHTML + ' (' + link61.href + ')';
+// 	this.removeEventListener('click', func61);
+// }
+
+
+// //2 Дана кнопка, значением которой служит число 1. Сделайте так, чтобы по клику на эту кнопку ее значение каждый раз увеличивалось на единицу. После того, как значение кнопки достигнет 10 - отвяжите обработчик события, чтобы кнопка больше не реагировала на нажатие.
+// let button62 = document.querySelector('#button62');
+// button62.addEventListener('click', func62);
+// function func62(){
+// 	this.value++;
+// 	if (this.value == 10) {
+// 		this.removeEventListener('click', func62);
+// 	}
+// }
+
+
+// ///////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////
+// //Отвязывание обработчиков событий в цикле
+
+// let abz = document.querySelectorAll('.abz');
+// for (let elem of abz) {
+// 	elem.addEventListener('click', abzFunc);
+// }
+
+// function abzFunc(){
+// 	this.innerHTML = this.innerHTML + '!';
+// 	this.removeEventListener('click', abzFunc);
+// }
+
+
+
+// ///////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////
+// //Отвязывание анонимных функций в JavaScript
+// let elems = document.querySelectorAll('p');
+
+// for (let elem of elems) {
+// 	elem.addEventListener('click', function func() {
+// 		alert(this.innerHTML);
+// 		this.removeEventListener('click', func); // отвязываем функцию
+// 	});
+// }
+
+
+
+// /////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
+// //Метод getAttribute
+
+// let elem63 = document.querySelector('#elem63');
+// let value63 = elem63.getAttribute('value');
+// console.log(value63);
+
+// let elem64 = document.querySelector('#elem64');
+// let class64 = elem64.getAttribute('class');
+// console.log(class64);
+
+
+// let elem65 = document.querySelector('#elem65');
+// let value65 = elem65.setAttribute('value', 'text');
+
+
+// let elem66 = document.querySelector('#elem66');
+// elem66.setAttribute('class', 'valid');
+
+
+// let elem67 = document.querySelector('#elem67');
+// elem67.removeAttribute('value');
+
+// let elem68 = document.querySelector('#elem68');
+// console.log(elem68.hasAttribute('value'));
+
+
+
+
+/////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
-//Привязывание обработчиков событий к элементам
-
-let button = document.querySelector('#button');
-button.addEventListener('click', function() {
-	alert('!!!');
-});
-
-
-let button1 = document.querySelector('#button1');
-button1.addEventListener('click', function(){
-	alert('Hey, number 1!');
-});
-
-
-let button2 = document.querySelector('#button2');
-button2.addEventListener('click', function(){
-	alert('You\'re extremely awesome!');
-});
-
-let button3 = document.querySelector('#button3');
-button3.addEventListener('click', function(){
-	alert('You got this!!!');
-});
-
-
-
-
-//Дана кнопка. По двойному клику по ней выведите на экран какое-нибудь сообщение.
-let button4 = document.querySelector('#button4');
-button4.addEventListener('dblclick', function(){
-	alert('You clicked this button twice :)');
-});
-
-
-
-//Дана кнопка. По наведению на нее выведите на экран какое-нибудь сообщение.
-let button5 = document.querySelector('#button5');
-button5.addEventListener('mouseover', function(){
-	alert('Cursor is over this button :)');
-});
-
-//Дана кнопка. По уходу курсора с нее выведите на экран какое-нибудь сообщение.
-button5.addEventListener('mouseout', function(){
-	alert('HEY, WHERE ARE YOU GOING ?!!!');
-});
-
-
-//Дана кнопка. По клику на нее выведите число 1, а по двойному клику - число 2.
-let button6 = document.querySelector('#button6');
-button6.addEventListener('click', function(){
-	alert('1');
-});
-button6.addEventListener('dblclick', function(){
-	alert('2');
-});
-
-
-
-
-
-
-
-
-
-
-
-/////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////
-//Именованные обработчики событий в JavaScript
-
-function func7() {
-	alert(7);
-}
-function func8() {
-	alert(8);
-}
-
-let button7 = document.querySelector('#button7');
-button7.addEventListener('click', func7);
-
-let button8 = document.querySelector('#button8');
-button8.addEventListener('mouseout', func8);
-
-
-
-
-
-
-/////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////
-//Привязывание одного обработчика ко многим элементам
-
-let elem10 = document.querySelector('#elem10');
-let elem20 = document.querySelector('#elem20');
-let elem30 = document.querySelector('#elem30');
-let elem40 = document.querySelector('#elem40');
-let elem50 = document.querySelector('#elem50');
-
-function func10() {
-	alert('message');
-}
-
-elem10.addEventListener('mouseover', func10);
-elem20.addEventListener('mouseover', func10);
-elem30.addEventListener('mouseover', func10);
-elem40.addEventListener('mouseover', func10);
-elem50.addEventListener('mouseover', func10);
-
-
-
-
-
-
-/////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////
-//Несколько обработчиков одного события в JavaScript
-
-function func11() {
-	alert('1');
-}
-
-function func21() {
-	alert('2');
-}
-
-function func31() {
-	alert('3');
-}
-
-let elem60 = document.querySelector('#elem60');
-elem60.addEventListener('click', func11);
-elem60.addEventListener('click', func21);
-elem60.addEventListener('click', func31);
-
-
-let button9 = document.querySelector('#button9');
-button9.addEventListener('dblclick', function(){
-	alert(123);
-});
-button9.addEventListener('dblclick', function(){
-	alert(456);
-});
-button9.addEventListener('dblclick', function(){
-	alert(789);
-});
-
-
-
-
-
-
-
-////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////
-//Работа с текстом тега на JavaScript
-
-let elementary = document.querySelector('#elementary');
-let button10 = document.querySelector('#button10');
-
-button10.addEventListener('click', function(){
-	alert(elementary.innerHTML);
-});
-
-
-
-//Даны два абзаца, содержащие своим текстом какие-то числа, и кнопка. По нажатию на кнопку выведите на экран сумму хранящихся чисел.
-let elementary1 = document.querySelector('#elementary1')
-let elementary2 = document.querySelector('#elementary2')
-let button11 = document.querySelector('#button11')
-
-button11.addEventListener('dblclick', function(){
-	alert(+elementary1.innerHTML + +elementary2.innerHTML);
-});
-
-
-//Даны два абзаца и две кнопки. Пусть нажатие на первую кнопку выводит текст первого абзаца, а нажатие на вторую кнопку - текст второго абзаца.
-let firstP = document.querySelector('#firstP');
-let secondP = document.querySelector('#secondP');
-let button12 = document.querySelector('#button12');
-let button13 = document.querySelector('#button13');
-
-button12.addEventListener('click', function(){
-	alert(firstP.innerHTML);
-});
-button13.addEventListener('click', function() {
-	alert(secondP.innerHTML);
-});
-
-
-
-
-
-//Дан абзац и две кнопки. По нажатию на первую кнопку запишите в абзац слово 'привет', а по нажатию на вторую кнопку - слово 'пока'.
-let privet = document.querySelector('#privet');
-let poka = document.querySelector('#poka');
-let button14 = document.querySelector('#button14');
-let button15 = document.querySelector('#button15');
-
-button14.addEventListener('click', function() {
-	privet.innerHTML = 'PRIVEEET';
-});
-button15.addEventListener('click', function(){
-	poka.innerHTML = 'POKAAA';
-});
-
-
-//Даны 3 абзаца с текстом. По нажатию на первый абзац запишите в его текст число 1, по нажатию на второй абзац запишите в его текст число 2, а по нажатию на третий - запишите в его текст число 3.
-let per = document.querySelector('#per');
-let vtor = document.querySelector('#vtor');
-let tre = document.querySelector('#tre');
-
-per.addEventListener('click', function(){
-	per.innerHTML = '1';
-});
-vtor.addEventListener('click', function(){
-	vtor.innerHTML = 2;
-});
-tre.addEventListener('click', function(){
-	tre.innerHTML = 3;
-});
-
-
-
-
-//Дан абзац и кнопка. В абзаце записано какое-то число. По нажатию на кнопку возведите значение абзаца в квадрат и запишите его обратно.
-let number1 = document.querySelector('#number1');
-let button16 = document.querySelector('#button16');
-
-button16.addEventListener('click', function(){
-	number1.innerHTML = number1.innerHTML ** 2;
-});
-
-
-//Дан абзац с числом и кнопка. По нажатию на кнопку прибавьте к значению абзаца единицу и запишите полученное число обратно.
-let number2 = document.querySelector('#number2');
-let button17 = document.querySelector('#button17');
-
-button17.addEventListener('click', function(){
-	number2.innerHTML = +number2.innerHTML + 1;
-});
-
-
-//Дан абзац и кнопка. По нажатию на кнопку запишите в абзац текст '<i>hello</i>'.
-
-let hi = document.querySelector('#hi');
-let button18 = document.querySelector('#button18');
-button18.addEventListener('click', function(){
-	hi.innerHTML = '<i>hello</i>';
-});
-
-//Дан абзац с текстом и кнопка. По нажатию на кнопку прочитайте текст абзаца, оберните этот текст в теги <b> и запишите новый текст обратно в абзац.
-
-let fat = document.querySelector('#fat');
-let button19 = document.querySelector('#button19');
-
-button19.addEventListener('click', function(){
-	fat.innerHTML = '<b>' + fat.innerHTML + '</b>';
-});
-
-
-
-
-
-
-
-
-
-
-///////////////////////////////////////////////////////
-////////////////////////////////////////////////////////
-//Работа с атрибутами тегов через свойства элементов
-
-//Дана также кнопка. По нажатию на кнопку выведите на экран содержимое атрибута type указанного выше инпута.
-
-let elemEmail = document.querySelector('#elemEmail');
-let button20 = document.querySelector('#button20');
-
-button20.addEventListener('click', function(){
-	alert(elemEmail.type);
-});
-
-
-//Дана также кнопка. По нажатию на кнопку выведите запишите в атрибут type значение submit.
-let elemEmail21 = document.querySelector('#elemEmail21');
-let button21 = document.querySelector('#button21');
-
-button21.addEventListener('click', function(){
-	elemEmail21.type = 'submit';
-})
-
-
-//3 Пусть у вас есть ссылка в виде тега a, кнопка и абзац. По нажатию на кнопку выведите в абзац содержимое атрибута href ссылки.
-let link = document.querySelector('#link');
-let button22 = document.querySelector('#button22');
-let linkB = document.querySelector('#linkB');
-
-button22.addEventListener('click', function(){
-	linkB.innerHTML = link.href;
-});
-
-
-//4 Пусть у вас есть ссылка и кнопка. По нажатию на кнопку добавьте в конец текста ссылки содержимое ее атрибута href в круглых скобках.
-
-let link23 = document.querySelector('#link23');
-let button23 = document.querySelector('#button23');
-
-button23.addEventListener('click', function(){
-	button23.value = button23.value + ' (' + link23.href + ')';
-});
-
-
-//5 Пусть у вас есть картинка. Разместите ее на странице в помощью тега img. Пусть даны также кнопка и абзац. Сделайте так, чтобы по клику на кнопку в абзац записался путь к картинки из ее атрибута src.
-
-let palms = document.querySelector('#palms');
-let button24 = document.querySelector('#button24');
-let palmsP = document.querySelector('#palmsP');
-
-button24.addEventListener('click', function(){
-	palmsP.innerHTML = palms.src;
-});
-
-
-//6 Дана картинка в теге img и кнопка. По нажатию на кнопку в атрибут width запишите значение 300.
-
-let house = document.querySelector('#house');
-let button25 = document.querySelector('#button25');
-
-button25.addEventListener('click', function(){
-	house.width = house.width * 2;
-});
-
-
-//8 Пусть у вас есть две картинки. Сделайте на странице тег img и две кнопки. По нажатию на первую кнопку запишите в атрибут src путь к первой картинке, а по нажатию на вторую - путь ко второй картинке.
-
-let meWa = document.querySelector('#meWa');
-let meMo = document.querySelector('#meMo');
-let meWa26 = document.querySelector('#meWa26');
-let meMo27 = document.querySelector('#meMo27');
-
-meWa26.addEventListener('click', function(){
-	meWa.src = 'img/20180805_123845_0.jpg';
-});
-meMo27.addEventListener('click', function(){
-	meMo.src = 'img/IMG_4003.JPG';
-});
-
-
-
-
-
-
-
-
-
-
-////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
-//Работа с текстовыми полями в JavaScript
-
-
-//1 Сделайте кнопку, нажатие на которую будет выводить текущий текст инпута. После захода на страницу нажмите на кнопку, чтобы увидеть текущий текст инпута, затем поредактируйте текст в инпуте и еще раз нажмите на кнопку. Убедитесь в том, что выведется новый текст инпута.
-
-let elem111 = document.querySelector('#elem111');
-let button28 = document.querySelector('#button28');
-
-button28.addEventListener('click', function(){
-	alert(elem111.value);
-});
-
-
-//2 Дан инпут и кнопка. По нажатию на кнопку запишите в инпут какой-нибудь текст.
-let elem29 = document.querySelector('#elem29');
-let button29 = document.querySelector('#button29');
-
-button29.addEventListener('click', function() {
-	elem29.value = 'вы нажали на кнопку и добавили текст в инпут';
-});
-
-
-
-//3 Дан инпут, абзац и кнопка. По нажатию на кнопку запишите в абзац текст из инпута.
-
-let elem300 = document.querySelector('#elem300');
-let button30 = document.querySelector('#button30');
-let text30 = document.querySelector('#text30');
-
-button30.addEventListener('click', function(){
-	text30.innerHTML = elem300.value;
-});
-
-
-//4 Даны два инпута и кнопка. В первый инпут пользователем вводится число. По нажатию на кнопку запишите во второй инпут квадрат введенного числа.
-let elem31 = document.querySelector('#elem31');
-let elem31W = document.querySelector('#elem31W');
-let button31 = document.querySelector('#button31');
-
-button31.addEventListener('click', function(){
-	elem31W.value = elem31.value ** 2;
-});
-
-
-
-//5 Даны два инпута и кнопка. По нажатию на кнопку запишите в первый инпут значение второго инпута, а во второй инпут - значение первого. Ваш код должен работать универсально, для любых значений инпутов.
-
-let elem32 = document.querySelector('#elem32');
-let elem33 = document.querySelector('#elem33');
-let button32 = document.querySelector('#button32');
-
-button32.addEventListener("click", function() {
-	let current = elem32.value;
-	elem32.value = elem33.value;
-	elem33.value = current;
-});
-
-//6 Даны два инпута и кнопка. В первый инпут пользователем вводится число. По нажатию на кнопку запишите во второй инпут квадрат введенного числа.
-
-let elem34 = document.querySelector('#elem34');
-let elem34a = document.querySelector('#elem34a');
-let button34 = document.querySelector('#button34');
-
-button34.addEventListener('click', function() {
-	elem34a.value = elem34.value ** 2;
-});
-
-
-//7 Даны 5 инпутов, абзац и кнопка. В инпут вводятся числа. По нажатию на кнопку запишите среднее арифметическое введенных чисел в абзац.
-
-let elem35 = document.querySelector('#elem35');
-let elem36 = document.querySelector('#elem36');
-let elem37 = document.querySelector('#elem37');
-let elem38 = document.querySelector('#elem38');
-let elem39 = document.querySelector('#elem39');
-let button39 = document.querySelector('#button39');
-let p39 = document.querySelector('.p39');
-
-button39.addEventListener('click', function(){
-	p39.innerHTML = (+elem35.value + +elem36.value + +elem37.value +
-		+elem38.value + +elem39.value) / 5;
-});
-
-
-
-
-
-
-
-///////////////////////////////////////////////////////
-////////////////////////////////////////////////////
-//Фокус текстовых полей в JavaScript
-
-//Дан инпут. По получению фокуса запишите в него число 1, а по потери фокуса - число 2.
-let elem400 = document.querySelector('#elem400');
-elem400.addEventListener('focus', function() {
-	elem400.value = 1;
-});
-elem400.addEventListener('blur', function(){
-	elem400.value = 2;
-});
-
-
-//Дан инпут. Пусть в него вводится число. По потери фокуса выведите на экран квадрат этого числа.
-let elem41 = document.querySelector('#elem41');
-elem41.addEventListener('blur', function(){
-	elem41.value = elem41.value ** 2;
-});
-
-//Дан инпут, в котором изначально есть какой-то текст. По получению фокуса инпутом очистите содержимое этого инпута.
-let elem42 = document.querySelector('#elem42');
-elem42.addEventListener('focus', function(){
-	elem42.value = '';
-});
-
-
-
-
-
-
-
-///////////////////////////////////////////////////////
-//////////////////////////////////////////////////////
-//Исключения при работе с атрибутами в JavaScript
-
-
-//По нажатию на кнопку прочитайте и выведите на экран значение атрибута class нашего дива.
-let elem43 = document.querySelector('#elem43');
-let button43 = document.querySelector('#button43');
-button43.addEventListener('click', function(){
-	alert(elem43.className);
-});
-
-
-
-//По нажатию на кнопку запишите в атрибут class нашего дива какой-нибудь класс.
-let elem44 = document.querySelector('#elem44');
-let button44 = document.querySelector('#button44');
-button44.addEventListener('click', function(){
-	elem44.className = 'newClass';
-	console.log(elem44.className);
-});
-
-
-//По нажатию на кнопку получите массив CSS классов нашего дива.
-let elem45 = document.querySelector('#elem45');
-let button45 = document.querySelector('#button45');
-button45.addEventListener('click', function(){
-	let arr = [];
-	arr = elem45.className.split(' ');
-	console.log(arr);
-});
-
-
-
-
-///////////////////////////////////////////////////////
-//////////////////////////////////////////////////////
-//Цепочки методов и свойств в JavaScript
-
-//Переделайте приведенный выше код так, чтобы вместо введения переменной image использовалась цепочка.
-//<img id="image" src="avatar.png">
-//let image = document.querySelector('#image');
-//console.log(image.src);
-//console.log(document.querySelector('#image').src);
-
-
-
-///////////////////////////////////////////////////////
-//////////////////////////////////////////////////////
-//Объект this в JavaScript
-
-//Дан инпут. По получению фокуса этим инпутом запишите в него число 1, а по потери фокуса - число 2. Для обращения у инпуту внутри функции-обработчика используйте объект this.
-let elem46 = document.querySelector('#elem46');
-elem46.addEventListener('focus', function(){
-	this.value = 1;
-});
-elem46.addEventListener('blur', func46);
-function func46() {
-	this.value = 2;
-}
-
-
-//Дана кнопка, значением которой служит число 1. Сделайте так, чтобы по клику на эту кнопку ее значение каждый раз увеличивалось на единицу.
-let button47 = document.querySelector('#button47');
-button47.addEventListener('click', func47);
-function func47() {
-	this.value = +this.value + 1;
-}
-
-//Даны 5 абзацев с какими-то текстами. По клику на любой абзац запишите в конец его текста восклицательный знак.
-let elem48 = document.querySelector('#elem48');
-let elem49 = document.querySelector('#elem49');
-let elem51 = document.querySelector('#elem51');
-
-function func51 () {
-	this.innerHTML += '!';
-}
-
-elem48.addEventListener('click', func51);
-elem49.addEventListener('click', func51);
-elem51.addEventListener('click', func51);
-
-
-//Даны 3 инпута, в которых записаны какие-то числа. По потери фокуса в любом из инпутов возведите стоящее в нем число в квадрат.
-let elem52 = document.querySelector('#elem52');
-let elem53 = document.querySelector('#elem53');
-let elem54 = document.querySelector('#elem54');
-
-function func54() {
-	this.value **= 2;
-}
-
-elem52.addEventListener('blur', func54);
-elem53.addEventListener('blur', func54);
-elem54.addEventListener('blur', func54);
-
-
-
-
-///////////////////////////////////////////////////////
-//////////////////////////////////////////////////////
-//Получение группы элементов
-
-//1 Даны абзацы и кнопка. По нажатию на кнопку найдите все абзацы, переберите из циклом и установите текст каждого абзаца в значение text.
-
-let texts = document.querySelectorAll('.text55');
-let button55 = document.querySelector('#button55');
-
-button55.addEventListener('click', function(){
-	for (let elem of texts) {
-		elem.innerHTML = 'text';
+//Разница между способами получения атрибутов
+
+//Дан инпут с каким-то начальным значением. Дана также кнопка. По нажатию на кнопку определите, было ли изменено пользователем начальное значение инпута.
+let elem69 = document.querySelector('#elem69');
+let button69 = document.querySelector('#button69');
+button69.addEventListener('click', function(){
+	let value69 = elem69.getAttribute('value');
+	if (elem69.value == value69) {
+		console.log(true);
+	} else {
+		console.log(false);
 	}
 });
 
-
-//2 Даны абзацы с текстом и кнопка. По нажатию на кнопку запишите в конец текста каждого абзаца его порядковый номер
-let text56 = document.querySelectorAll('.text56');
-let button56 = document.querySelector('#button56');
-
-button56.addEventListener('click', function(){
-	let n = 0;
-	for (elem of text56) {
-		elem.innerHTML = elem.innerHTML + ' - ' + ++n;
-	}
+//Дан инпут с каким-то начальным значением. Пусть пользователь меняет это значение. Сделайте рядом с инпутом кнопку, по нажатию на которую value инпута вернется в изначальное значение.
+let elem71 = document.querySelector('#elem71');
+let button71 = document.querySelector('#button71');
+button71.addEventListener('click', function(){
+	let value71 = elem71.setAttribute('value', 'fuck you');
+	elem71.value = value71;
 });
-
-
-//3 Даны инпуты с числами, абзац и кнопка. По нажатию на кнопку найдите сумму чисел из инпутов и запишите эту сумму в текст абзаца.
-let text57 = document.querySelectorAll('.text57');
-let button57 = document.querySelector('#button57');
-let result57 = document.querySelector('#result57');
-
-button57.addEventListener('click', function(){
-	let sum = 0;
-	for (let elem of text57) {
-		sum += +elem.value;
-	}
-	result57.innerHTML = sum;
-});
-
-
-
-
-///////////////////////////////////////////////////////
-//////////////////////////////////////////////////////
-//Добавление обработчиков событий в цикле
-
-
-function func58() {
-	this.value = Number(this.value) + 1;
-}
-//1 Даны также инпуты. Сделайте так, чтобы по потери фокуса в любом из наших инпутов выполнялась приведенная выше функция.
-let inputs = document.querySelectorAll('input');
-for (let elem of inputs) {
-	elem.addEventListener('blur', func58);
-}
-
-
-//2 Даны абзацы с числами. Сделайте так, чтобы по клику на любой абзац его число в нем возводилось в квадрат.
-let ps = document.querySelectorAll('p');
-for (let elem of ps) {
-	elem.addEventListener('click', func59);
-}
-function func59() {
-	this.innerHTML **= 2;
-}
-
-
-
-
-///////////////////////////////////////////////////////
-//////////////////////////////////////////////////////
-//Отвязывание событий через removeEventListener
-
-//1 Дана ссылка. По нажатию на эту ссылку добавьте в конец ее текста содержимое ее атрибута href в круглых скобках. Сделайте так, чтобы это добавление происходило лишь по первому нажатию.
-let link61 = document.querySelector('#link61');
-link61.addEventListener('click', func61);
-
-function func61() {
-	link61.innerHTML = link61.innerHTML + ' (' + link61.href + ')';
-	this.removeEventListener('click', func61);
-}
-
-
-//2 Дана кнопка, значением которой служит число 1. Сделайте так, чтобы по клику на эту кнопку ее значение каждый раз увеличивалось на единицу. После того, как значение кнопки достигнет 10 - отвяжите обработчик события, чтобы кнопка больше не реагировала на нажатие.
-let button62 = document.querySelector('#button62');
-button62.addEventListener('click', func62);
-function func62(){
-	this.value++;
-	if (this.value == 10) {
-		this.removeEventListener('click', func62);
-	}
-}
-
-
-///////////////////////////////////////////////////////
-//////////////////////////////////////////////////////
-//Отвязывание обработчиков событий в цикле
-
-let abz = document.querySelectorAll('.abz');
-for (let elem of abz) {
-	elem.addEventListener('click', abzFunc);
-}
-
-function abzFunc(){
-	this.innerHTML = this.innerHTML + '!';
-	this.removeEventListener('click', abzFunc);
-}
-
-
-
-///////////////////////////////////////////////////////
-//////////////////////////////////////////////////////
-//Отвязывание анонимных функций в JavaScript
-let elems = document.querySelectorAll('p');
-
-for (let elem of elems) {
-	elem.addEventListener('click', function func() {
-		alert(this.innerHTML);
-		this.removeEventListener('click', func); // отвязываем функцию
-	});
-}
-
-
-
-/////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
-//Метод getAttribute
-
-let elem63 = document.querySelector('#elem63');
-let value63 = elem63.getAttribute('value');
-console.log(value63);
-
-let elem64 = document.querySelector('#elem64');
-let class64 = elem64.getAttribute('class');
-console.log(class64);
-
-
-let elem65 = document.querySelector('#elem65');
-let value65 = elem65.setAttribute('value', 'text');
-
-
-let elem66 = document.querySelector('#elem66');
-elem66.setAttribute('class', 'valid');
-
-
-let elem67 = document.querySelector('#elem67');
-elem67.removeAttribute('value');
-
-let elem68 = document.querySelector('#elem68');
-console.log(elem68.hasAttribute('value'));
