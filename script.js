@@ -6924,3 +6924,32 @@ for (let elem of elems) {
 		this.removeEventListener('click', func); // отвязываем функцию
 	});
 }
+
+
+
+/////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//Метод getAttribute
+
+let elem63 = document.querySelector('#elem63');
+let value63 = elem63.getAttribute('value');
+console.log(value63);
+
+let elem64 = document.querySelector('#elem64');
+let class64 = elem64.getAttribute('class');
+console.log(class64);
+
+
+let elem65 = document.querySelector('#elem65');
+let value65 = elem65.setAttribute('value', 'text');
+
+
+let elem66 = document.querySelector('#elem66');
+elem66.setAttribute('class', 'valid');
+
+
+let elem67 = document.querySelector('#elem67');
+elem67.removeAttribute('value');
+
+let elem68 = document.querySelector('#elem68');
+console.log(elem68.hasAttribute('value'));
