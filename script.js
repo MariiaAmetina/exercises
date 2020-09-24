@@ -7014,3 +7014,28 @@ console.log(contains);
 //6 Добавьте ему класс www, если его нет и удалите - если есть.
 elem72.classList.toggle('www');
 elem72.classList.toggle('xxx');
+
+
+
+/////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//Стилизация элементов через атрибут style в JavaScript
+
+//1 Дан див и кнопка. По клику на кнопку добавьте диву ширину, высоту и границу.
+//2 Дан див с текстом и кнопка. По клику на кнопку установите диву размер шрифта в 20px, а также верхнюю границу и фон.
+let elem73 = document.querySelector('#elem73');
+let button73 = document.querySelector('#button73');
+button73.addEventListener('click', function(){
+	elem73.style.width = '200px';
+	elem73.style.height = '50px';
+	elem73.style.border = 'pink solid 2px';
+	elem73.style.fontSize = '30px';
+	elem73.style.backgroundColor = 'green';
+});
+
+//3 Дан список ul и кнопка. По клику на кнопку добавьте тегам li свойство float в значении left.
+let elem74 = document.querySelector('#elem74');
+let button74 = document.querySelector('#button74');
+button74.addEventListener('click', function() {
+	elem74.style.cssFloat = 'left';
+});
