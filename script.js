@@ -7115,3 +7115,58 @@ elem83.addEventListener('blur', function(){
 });
 
 //4 Дан инпут. В него вводятся числа через запятую. По потери фокуса найдите среднее арифметическое этих чисел (сумма делить на количество).
+let elem84 = document.querySelector('#elem84');
+elem84.addEventListener('blur', function(){
+	let sum = 0;
+	let average;
+	let arr = elem84.value.split(',');
+	for (let elem of arr) {
+		sum += Number(elem);
+	}
+	average = sum / arr.length;
+	elem84.value = average;
+});
+
+//5 Даны 4 инпута. В первый инпут вводится ФИО через пробел. По потери фокуса запишите фамилию, имя и отчество в остальные 3 инпута.
+let elem85 = document.querySelector('#elem85');
+let elem86 = document.querySelector('#elem86');
+let elem87 = document.querySelector('#elem87');
+let elem88 = document.querySelector('#elem88');
+
+elem85.addEventListener('blur', function(){
+	let arr = elem85.value.split(' ');
+	elem86.value = arr[0];
+	elem87.value = arr[1];
+	elem88.value = arr[2];
+});
+
+//6 Дан инпут. В него вводится ФИО через пробел. ФИО вводится с маленькой буквы. Сделайте так, чтобы по потери фокуса инпутом, введенные фамилия, имя и отчество автоматически стали записанными с большой буквы (в этом же инпуте).
+let elem89 = document.querySelector('#elem89');
+elem89.addEventListener('blur', function(){
+	let arr = elem89.value.split(' ');
+	elem89.value = arr[0][0].toUpperCase() + arr[0].slice(1) + ' ' + arr[1][0].toUpperCase() + arr[1].slice(1) + ' ' + arr[2][0].toUpperCase() + arr[2].slice(1);
+});
+
+//7 Дан инпут. В него вводится текст. По потери фокуса узнайте количество слов в этом тексте.
+let elem91 = document.querySelector('#elem91');
+elem91.addEventListener('blur', function(){
+	let arr = elem91.value.split(' ');
+	elem91.value = arr.length;
+});
+
+//8 Дан инпут. В него вводится дата в формате 31.12.2016. По потери фокуса в этом же инпуте поставьте эту дату в формате 2016-12-31.
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//Нахождение элементов по родственным связям
