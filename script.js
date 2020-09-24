@@ -7039,3 +7039,33 @@ let button74 = document.querySelector('#button74');
 button74.addEventListener('click', function() {
 	elem74.style.cssFloat = 'left';
 });
+
+
+
+/////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//Стилизация с помощью CSS классов на JavaScript
+
+//Дан абзац. Даны кнопки 'перечеркнуть', 'сделать жирным', 'сделать красным'. Пусть по нажатию на каждую кнопку заданное действие происходит с абзацем (становится красным, например).
+//Модифицируйте предыдущую задачу так, чтобы повторное нажатие на кнопку отменяло действие этой кнопки.
+let elem75 = document.querySelector('#elem75');
+let button75 = document.querySelector('#button75'); 
+let button76 = document.querySelector('#button76');
+let button77 = document.querySelector('#button77');
+
+button75.addEventListener('click', function(){
+	elem75.classList.add('crossed');
+});
+button76.addEventListener('click', function(){
+	elem75.classList.toggle('bold');
+});
+button77.addEventListener('click', function(){
+	elem75.classList.toggle('colored');
+});
+
+let button78 = document.querySelector('#button78');
+let elem78 = document.querySelector('#elem78');
+
+button78.addEventListener('click', function() {
+	elem78.classList.toggle('active');
+});

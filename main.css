@@ -4,3 +4,23 @@
 img {
     height: 400px;
 }
+
+.crossed {
+    text-decoration: line-through;
+}
+.bold {
+    font-weight: bold;
+}
+.colored {
+    color: red;
+}
+
+#elem78 {
+	display: none;
+	width: 200px;
+	height: 200px;
+	border: 1px solid green;
+}
+#elem78.active {
+	display: block;
+}
