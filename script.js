@@ -6962,21 +6962,55 @@ console.log(users); */
 //Разница между способами получения атрибутов
 
 //Дан инпут с каким-то начальным значением. Дана также кнопка. По нажатию на кнопку определите, было ли изменено пользователем начальное значение инпута.
-let elem69 = document.querySelector('#elem69');
-let button69 = document.querySelector('#button69');
-button69.addEventListener('click', function(){
-	let value69 = elem69.getAttribute('value');
-	if (elem69.value == value69) {
-		console.log(true);
-	} else {
-		console.log(false);
-	}
-});
+// let elem69 = document.querySelector('#elem69');
+// let button69 = document.querySelector('#button69');
+// button69.addEventListener('click', function(){
+// 	let value69 = elem69.getAttribute('value');
+// 	if (elem69.value == value69) {
+// 		console.log(true);
+// 	} else {
+// 		console.log(false);
+// 	}
+// });
 
-//Дан инпут с каким-то начальным значением. Пусть пользователь меняет это значение. Сделайте рядом с инпутом кнопку, по нажатию на которую value инпута вернется в изначальное значение.
-let elem71 = document.querySelector('#elem71');
-let button71 = document.querySelector('#button71');
-button71.addEventListener('click', function(){
-	let value71 = elem71.setAttribute('value', 'fuck you');
-	elem71.value = value71;
-});
+// //Дан инпут с каким-то начальным значением. Пусть пользователь меняет это значение. Сделайте рядом с инпутом кнопку, по нажатию на которую value инпута вернется в изначальное значение.
+// let elem71 = document.querySelector('#elem71');
+// let button71 = document.querySelector('#button71');
+// button71.addEventListener('click', function(){
+// 	let value71 = elem71.setAttribute('value', 'fuck you');
+// 	elem71.value = value71;
+// });
+
+
+
+
+
+//////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//Манипулирование CSS классами в JavaScript
+
+//1 Узнайте количество его классов.
+let elem72 = document.querySelector('#elem72');
+let len = elem72.classList.length;
+console.log(len);
+
+
+//2 Переберите в цикле его классы.
+let classNames = elem72.classList;
+for (let names of classNames){
+	console.log(names);
+}
+
+//3 Добавьте ему класс xxx.
+elem72.classList.add('xxx');
+
+//4 Удалите у него класс www и класс zzz.
+elem72.classList.remove('www', 'zzz');
+
+//5 Проверьте наличие у него класса ggg.
+let contains = elem72.classList.contains('ggg');
+console.log(contains);
+
+//6 Добавьте ему класс www, если его нет и удалите - если есть.
+elem72.classList.toggle('www');
+elem72.classList.toggle('xxx');
