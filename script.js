@@ -7063,9 +7063,55 @@ button77.addEventListener('click', function(){
 	elem75.classList.toggle('colored');
 });
 
+
+//Давайте сделаем кнопку, по нажатию на которую элемент будет то показываться, то скрываться. Пусть по умолчанию элемент скрыт (это реализуем с помощью display: none), а покажется он с помощью добавления класса active. Этот класс будем то добавлять, то убирать с помощью classList.toggle:
 let button78 = document.querySelector('#button78');
 let elem78 = document.querySelector('#elem78');
 
 button78.addEventListener('click', function() {
 	elem78.classList.toggle('active');
 });
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Отработка изученного материала на работу с DOM
+
+//1 Дан инпут и абзац. По потери фокуса в инпуте запишите значение инпута в конец текста абзаца.
+let elem79 = document.querySelector('#elem79');
+let elem81 = document.querySelector('#elem81');
+elem79.addEventListener('blur', function(){
+	elem81.innerHTML += elem79.value;
+});
+
+//2 Дано несколько инпутов, абзац и кнопка. По нажатию на кнопку получите числа, стоящие в этих инпутах и запишите их сумму в абзац.
+let elem82 = document.querySelectorAll('.elem82');
+let p82 = document.querySelector('#p82');
+let button82 = document.querySelector('#button82');
+
+button82.addEventListener('click', function(){
+	let sum = 0;
+	for (let elem of elem82) {
+		sum += Number(elem.value);
+	}
+	p82.innerHTML += sum;
+});
+
+//3 Дан инпут. В него вводится число. По потери фокуса найдите сумму цифр этого числа.
+let elem83 = document.querySelector('#elem83');
+elem83.addEventListener('blur', function(){
+	let sum = 0;
+	let arr = elem83.value.split('');
+	for (let elem of arr) {
+		sum += Number(elem);
+	}
+	elem83.value = sum;
+});
+
+//4 Дан инпут. В него вводятся числа через запятую. По потери фокуса найдите среднее арифметическое этих чисел (сумма делить на количество).
