@@ -7170,3 +7170,46 @@ elem91.addEventListener('blur', function(){
 //////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 //Нахождение элементов по родственным связям
+
+//1 Найдите первого потомка этого элемента и сделайте его текст красного цвета.
+let elem92 = document.querySelector('#elem92');
+elem92.firstElementChild.style.color = 'red';
+
+
+//3 Найдите всех потомков этого элемента и добавьте им в конец текст '!'.
+let elems = elem92.children;
+for (let elem of elems) {
+	elem.innerHTML += '!';
+}
+
+//4 Найдите его родителя и задайте ему красную границу.
+let elem93 = document.querySelector('#elem93');
+elem93.parentElement.style.border = 'pink solid 6px';
+
+//5 Найдите его родителя его родителя и задайте ему красную границу.
+let parent1 = elem93.parentElement;
+parent1.parentElement.style.border = 'blue solid 4px';
+
+//6 Найдите ближайшего родителя этого элемента, являющегося тегом div.
+let elem94 = document.querySelector('#elem94');
+let closePar = elem94.closest('div');
+console.log(closePar);
+
+
+//7 Найдите ближайшего родителя этого элемента, являющегося элементом с классом www.
+let elem95 = document.querySelector('#elem95');
+let par = elem95.closest('.www');
+console.log(par);
+
+
+//8 Найдите его соседа сверху и добавьте ему в конец текст '!'.
+let elem96 = document.querySelector('#elem96');
+elem96.previousElementSibling.innerHTML += '!';
+elem96.nextElementSibling.innerHTML += '!!!';
+elem96.nextElementSibling.nextElementSibling.innerHTML += '!!!!!!!!';
+
+//11 Поменяйте местами текст его соседа сверху и текст его соседа снизу.
+let elem97 = document.querySelector('#elem97');
+let elemmm = elem97.previousElementSibling.innerHTML;
+elem97.previousElementSibling.innerHTML = elem97.nextElementSibling.innerHTML;
+elem97.nextElementSibling.innerHTML = elemmm;
