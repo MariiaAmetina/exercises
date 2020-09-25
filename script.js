@@ -7213,3 +7213,34 @@ let elem97 = document.querySelector('#elem97');
 let elemmm = elem97.previousElementSibling.innerHTML;
 elem97.previousElementSibling.innerHTML = elem97.nextElementSibling.innerHTML;
 elem97.nextElementSibling.innerHTML = elemmm;
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//Другие полезные методы для поиска элементов
+
+//1 Получите этот элемент с помощью метода getElementById и установите ему какой-нибудь текст.
+let elem98 = document.getElementById('elem98');
+elem98.innerHTML = 'Masha';
+
+//2 Получите все теги li по имени тега и сделайте их текст красного цвета.
+let elem99 = document.getElementsByTagName('li');
+for (let elem of elem99) {
+	elem.style.color = 'red';
+}
+
+//3 Получите эти элементы по имени класса и сделайте их текст красного цвета.
+let elem100 = document.getElementsByClassName('www');
+for (let elem of elem100) {
+	elem.style.color = 'blue';
+}
