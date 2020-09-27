@@ -7244,3 +7244,15 @@ let elem100 = document.getElementsByClassName('www');
 for (let elem of elem100) {
 	elem.style.color = 'blue';
 }
+
+
+//////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//Поиск элементов внутри другого элемента
+
+//1 Найдите внутри родителя элементы с классом www и запишите их в переменную elems1. Затем найдите внутри родителя элементы с классом ggg и запишите их в переменную elems2.
+let parent101 = document.querySelector('#parent101');
+let elem101 = parent101.querySelectorAll('.www');
+let elem102 = parent101.querySelectorAll('.ggg');
+console.log(elem101);
+console.log(elem102);
