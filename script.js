@@ -7256,3 +7256,16 @@ let elem101 = parent101.querySelectorAll('.www');
 let elem102 = parent101.querySelectorAll('.ggg');
 console.log(elem101);
 console.log(elem102);
+
+
+
+
+//////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//Работа с текстареа в JavaScript
+let elem103 = document.querySelector('#elem103');
+let elem104 = document.querySelector('#elem104');
+
+elem103.addEventListener('blur', function(){
+	elem104.innerHTML = elem103.value;
+});
