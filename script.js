@@ -7294,3 +7294,32 @@ button107.addEventListener('click', function(){
 	console.log(elem107.disabled);
 	
 });
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//Работа с чекбоксами в JavaScript
+
+//1 Дан чекбокс и две кнопки. По нажатию на первую кнопку установите чекбокс в отмеченное состояние, а по нажатию на вторую - в неотмеченное.
+let elem108 = document.querySelector('#elem108');
+let button108 = document.querySelector('#button108');
+let button109 = document.querySelector('#button109');
+button108.addEventListener('click', function(){
+	elem108.checked = true;
+});
+button109.addEventListener('click', function(){
+	elem108.checked = false;
+});
+
+//2 Дан чекбокс, кнопка и абзац. По нажатию на кнопку, если чекбокс отмечен, выведите в абзац слово 'привет', а если чекбокс не отмечен, то слово 'пока'.
+let elem110 = document.querySelector('#elem110'); 
+let button110 = document.querySelector('#button110');
+let text110 = document.querySelector('#text110');
+button110.addEventListener('click', function(){
+	(elem110.checked) ? text110.innerHTML = 'привет' : text110.innerHTML = 'пока';
+});
