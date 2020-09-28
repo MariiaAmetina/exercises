@@ -7341,3 +7341,18 @@ let button113 = document.querySelector('#button113');
 button113.addEventListener('click', function(){
 	elem113.checked = !elem113.checked;
 });
+
+
+
+//////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//Работа с радиокнопками в JavaScript
+let radios = document.querySelectorAll('input[type="radio"]');
+let elem114 = document.querySelector('#elem114');
+elem114.addEventListener('click', function(){
+	for (let elem of radios) {
+		if (elem.checked) {
+			console.log(elem.value);
+		}
+	}
+})
