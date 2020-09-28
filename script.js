@@ -7414,3 +7414,23 @@ elem119.addEventListener('input', function(){
 	}
 	
 });
+
+
+//////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//Методы focus и blur в JavaScript
+
+//1 Даны два инпута. Сделайте так, чтобы после ввода двух символов фокус ввода переходил ко второму инпуту, а после ввода двух символов в этот инпут - фокус из него убирался.
+let elem120 = document.querySelector('#elem120');
+let elem121 = document.querySelector('#elem121');
+elem120.addEventListener('input', function(){
+	if (elem120.value.length >= 2) {
+		elem120.blur();
+		elem121.focus();
+	}
+});
+elem121.addEventListener('input', function(){
+	if (elem121.value.length >= 2) {
+		elem121.blur();
+	}
+});
