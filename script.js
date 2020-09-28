@@ -7355,4 +7355,35 @@ elem114.addEventListener('click', function(){
 			console.log(elem.value);
 		}
 	}
-})
+});
+
+
+
+//////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//Событие change в JavaScript
+
+//1 Дан инпут и абзац. По изменению инпута выведите его текст в абзац.
+let elem115 = document.querySelector('#elem115');
+let text115 = document.querySelector('#text115');
+elem115.addEventListener('change', function(){
+	text115.innerHTML = this.value;
+});
+
+
+//2 Дан чекбокс. По изменению чебокса выведите на экран его новое состояние.
+let check116 = document.querySelector('#check116');
+check116.addEventListener('change', function(){
+	console.log(this.checked);
+});
+
+//4 Дан инпут. По его изменению проверьте, количество символов в нем меньше 5-ти или нет. Если меньше - покрасьте границу инпута в зеленый цвет, а если больше - в красный.
+let elem117 = document.querySelector('#elem117');
+elem117.addEventListener('change', function(){
+	let arr = elem117.value.split('');
+	if (arr.length <= 5) {
+		elem117.style.borderColor = 'green';
+	} else {
+		elem117.style.borderColor = 'red';
+	}
+});
