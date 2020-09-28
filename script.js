@@ -7269,3 +7269,28 @@ let elem104 = document.querySelector('#elem104');
 elem103.addEventListener('blur', function(){
 	elem104.innerHTML = elem103.value;
 });
+
+
+//////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//Атрибут disabled в JavaScript
+//1 Дан инпут и кнопка. По нажатию на кнопку заблокируйте инпут.
+let elem105 = document.querySelector('#elem105');
+let button105 = document.querySelector('#button105');
+
+button105.addEventListener('click', function(){
+	elem105.disabled = true;
+});
+
+//2 Дан инпут и две кнопки. Пусть нажатие на первую кнопку блокирует инпут, а нажатие на вторую - отблокирует.
+button106.addEventListener('click', function(){
+	elem105.disabled = false;
+});
+
+//3 Дан инпут и кнопка. По нажатию на кнопку узнайте, заблокирован инпут или нет.
+let elem107 = document.querySelector('#elem107');
+let button107 = document.querySelector('#button107');
+button107.addEventListener('click', function(){
+	console.log(elem107.disabled);
+	
+});
