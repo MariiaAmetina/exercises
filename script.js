@@ -7387,3 +7387,30 @@ elem117.addEventListener('change', function(){
 		elem117.style.borderColor = 'red';
 	}
 });
+
+
+
+//////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//Событие input в JavaScript
+
+//1 Дан инпут. Пусть в него вводится текст. Как только длина текста достигнет 5-ти, выведите на экран сообщение об этом.
+let elem118 = document.querySelector('#elem118');
+elem118.addEventListener('input', function(){
+	(elem118.value.length >= 5) ? alert('длина текста достигла 5 символов') : false;
+});
+
+//2 Дан инпут. Пусть в него разрешено ввести 5 символов. Дан также абзац. По мере ввода символов в инпут пишите, сколько еще символов можно ввести. Когда количество символов превысит 5-ти, то в абзац выводите то, на сколько символов превышена длина текста.
+let elem119 = document.querySelector('#elem119');
+let text119 = document.querySelector('#text119');
+elem119.addEventListener('input', function(){
+	let n = 5;
+	if (this.value.length <= n) {
+		text119.innerHTML = 'осталось ввести ' + (n - this.value.length) + ' символов';
+		text119.style.color = 'green';
+	} else {
+		text119.innerHTML = 'длина текста превышена на ' + (this.value.length - n) + ' символов';
+		text119.style.color = 'red';
+	}
+	
+});
