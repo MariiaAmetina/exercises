@@ -7323,3 +7323,21 @@ let text110 = document.querySelector('#text110');
 button110.addEventListener('click', function(){
 	(elem110.checked) ? text110.innerHTML = 'привет' : text110.innerHTML = 'пока';
 });
+
+
+
+//////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//Чередование атрибутов без значений
+let elem112 = document.querySelector('#elem112');
+let button112 = document.querySelector('#button112');
+button112.addEventListener('click', function(){
+	elem112.disabled = !elem112.disabled;
+});
+
+//2 Дан чекбокс и кнопка. Сделайте так, чтобы каждый клик по кнопке приводил к смене состояния чекбокса.
+let elem113 = document.querySelector('#elem113');
+let button113 = document.querySelector('#button113');
+button113.addEventListener('click', function(){
+	elem113.checked = !elem113.checked;
+});
