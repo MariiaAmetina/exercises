@@ -7434,3 +7434,34 @@ elem121.addEventListener('input', function(){
 		elem121.blur();
 	}
 });
+
+
+
+
+
+//////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//Работа с выпадающими списками в JavaScript
+
+//1 Дан селект, абзац и кнопка. По клику на кнопку выведите текст выбранного пункта списка в абзац.
+let select122 = document.querySelector('#select122');
+let text122 = document.querySelector('#text122');
+let button122 = document.querySelector('#button122');
+button122.addEventListener('click', function(){
+	text122.innerHTML = select122.value;
+});
+//2 Сделайте выпадающий список годов от 2020 до 2030. При выборе какого-нибудь пункта списка выведите сообщение о том, високосный этот год или нет.
+let select123 = document.querySelector('#select123');
+select123.addEventListener('change', function(){
+	checkYears(this.value) ? alert('Високосный') : alert('Не високосный');
+});
+function checkYears(year){
+	let date = new Date(year, 2, 0);
+	return date.getDate() == 29 ? true : false;
+}
+
+//3 Сделайте выпадающий список с названиями дней недели. В качестве атрибутов value пунктов списка добавьте номера дней недели от 1 до 7. По изменению списка выведите на экран сообщение о том, выбран выходной день или рабочий.
+let select124 = document.querySelector('#select124');
+select124.addEventListener('change', function(){
+	(this.value <= 5) ? alert('Рабочий день') : alert('Выходной');
+});
