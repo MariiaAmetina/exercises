@@ -7465,3 +7465,19 @@ let select124 = document.querySelector('#select124');
 select124.addEventListener('change', function(){
 	(this.value <= 5) ? alert('Рабочий день') : alert('Выходной');
 });
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Изменение выбранного пункта списка на JavaScript
+
+//1 Сделайте выпадающий список с названиями месяцев. Сделайте так, чтобы по JavaScript по умолчанию выбирал в этом списке текущий месяц.
+let select125 = document.querySelector('#select125');
+let date125 = new Date();
+let month125 = date125.getMonth();
+select125.value = month125;
