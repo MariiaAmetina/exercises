@@ -7601,3 +7601,15 @@ let ip = 1;
 for (let elem of p136) {
 	elem.setAttribute('data-num', ip++);
 }
+
+
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Основы работы с объектом Event в JavaScript
+let elem137 = document.querySelector('#elem137');
+elem137.addEventListener('click', function(event) {
+	console.log(event);
+	
+});
