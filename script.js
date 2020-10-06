@@ -7493,3 +7493,15 @@ let text126 = document.querySelector('#text126');
 text126.addEventListener('blur', function(){
 	select126.selectedIndex = Number(text126.value);
 });
+
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Получение пунктов выпадающего списка на JavaScript
+
+//Переберите все пункты списка циклом и в конец текста каждого пункта добавьте значение его атрибута value.
+let select127 = document.querySelector('#select127');
+for (let option of select127) {
+	option.innerHTML = option.innerHTML + ' ' + option.value;
+}
