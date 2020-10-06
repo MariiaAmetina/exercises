@@ -7481,3 +7481,15 @@ let select125 = document.querySelector('#select125');
 let date125 = new Date();
 let month125 = date125.getMonth();
 select125.value = month125;
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Номер выбранного пункта выпадающего списка
+
+//1 Дан инпут и селект. В инпут вводится какое-то число. По потери фокуса сделайте выделенным пункт списка, номер которого равен значению из инпута.
+let select126 = document.querySelector('#select126');
+let text126 = document.querySelector('#text126');
+text126.addEventListener('blur', function(){
+	select126.selectedIndex = Number(text126.value);
+});
