@@ -7505,3 +7505,31 @@ let select127 = document.querySelector('#select127');
 for (let option of select127) {
 	option.innerHTML = option.innerHTML + ' ' + option.value;
 }
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Работа с пунктами выпадающего списка на JavaScript
+
+//1 Переберите пункты списка циклом и для выбранного пункта в конец текста добавьте восклицательный знак, а для невыбранных пунктов - вопросительный.
+for (let option of select127) {
+	(option.selected) ? option.text += '!' : option.text += '?';
+}
+
+//2 Дан выпадающий список и кнопка. По клику на кнопку сделайте отмеченным последний пункт списка.
+let button127 = document.querySelector('#button127');
+button127.addEventListener('click', function(){
+	let option = select127[4];
+	option.selected = true;
+});
+
+//3 Дан селект и кнопка. По нажатию на кнопку выведите на экран текст отмеченного пункта списка.
+let button128 = document.querySelector('#button128');
+button128.addEventListener('click', function(){
+	alert(select127[select127.selectedIndex].text);
+});
+
+//4 Дан селект и кнопка. По нажатию на кнопку добавьте в конец текста выбранного пункта восклицательный знак.
+let button129 = document.querySelector('#button129');
+button129.addEventListener('click', function() {
+	select127[select127.selectedIndex].text += '!';
+});
