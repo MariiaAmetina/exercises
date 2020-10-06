@@ -7508,7 +7508,7 @@ for (let option of select127) {
 
 ////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////
-//Работа с пунктами выпадающего списка на JavaScript
+//Работа с пунктами выпадающего списка на JavaScripts
 
 //1 Переберите пункты списка циклом и для выбранного пункта в конец текста добавьте восклицательный знак, а для невыбранных пунктов - вопросительный.
 for (let option of select127) {
@@ -7532,4 +7532,53 @@ button128.addEventListener('click', function(){
 let button129 = document.querySelector('#button129');
 button129.addEventListener('click', function() {
 	select127[select127.selectedIndex].text += '!';
+});
+
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Пользовательские атрибуты в JavaScript
+
+//1 Сделайте так, чтобы по клику на див в конец его текста добавилось содержимое его атрибута data-text.
+let elem130 = document.querySelector('#elem130');
+elem130.addEventListener('click', function(){
+	elem130.innerHTML += elem130.dataset.text;
+});
+
+
+//2 Сделайте так, чтобы по клику на любой из дивов ему в конец записывался его порядковый номер.
+let elem131 = document.querySelectorAll('.elem131');
+
+for (let elem of elem131) {
+	elem.addEventListener('click', function(){
+		this.innerHTML += this.dataset.num;
+	});
+}
+
+//3 Дана кнопка. Сделайте так, чтобы эта кнопка считала количество кликов по ней, записывая их в какой-нибудь пользовательский атрибут. Пусть по двойному клику на эту кнопку на экран выводится, сколько кликов по этой кнопке было сделано.
+let button132 = document.querySelector('#button132');
+let text132 = document.querySelector('#text132');
+let iii = 0;
+button132.addEventListener('click', function(){
+	iii++;
+	button132.dataset.count = iii;
+	console.log(button132.dataset.count);
+	
+});
+button132.addEventListener('dblclick', function(){
+	alert(button132.dataset.count);
+});
+
+//4 В этом инпуте в атрибуте data-length содержится количество символов, которое нужно ввести в инпут. Сделайте так, чтобы по потери фокуса, если количество введенных символов не совпадает с заданным, выводилось сообщение об этом.
+let elem133 = document.querySelector('#elem133');
+elem133.addEventListener('blur', function(){
+	(elem133.value.length != elem133.dataset.length) ? alert('not 5 simbols') : true;
+});
+
+//5 В этом инпуте атрибуты data-min и data-max содержат диапазон. Сделайте так, чтобы по потери фокуса, если количество введенных символов не попадает в этот диапазон, выводилось сообщение об этом.
+let elem134 = document.querySelector('#elem134');
+elem134.addEventListener('blur', function(){
+	(elem134.value.length >= elem134.dataset.min && 
+	elem134.value.length <= elem134.dataset.max) ? true : alert('less than 5 or more than 10');
 });
