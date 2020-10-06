@@ -7591,3 +7591,13 @@ let elem135 = document.querySelector('#elem135');
 elem135.addEventListener('click', function(){
 	elem135.innerHTML += ' ' + elem135.dataset.productPrice * elem135.dataset.productAmount;
 });
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Обращение через методы к data атрибутам в JavaScript
+let p136 = document.querySelectorAll('.p136');
+let ip = 1;
+for (let elem of p136) {
+	elem.setAttribute('data-num', ip++);
+}
