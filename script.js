@@ -7613,3 +7613,13 @@ elem137.addEventListener('click', function(event) {
 	console.log(event);
 	
 });
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Координаты события в JavaScript
+
+//Сделайте так, чтобы при движении мышки по странице, отображались координаты курсора, подобно тому, как это сделано в следующем образце:
+let elem138 = document.getElementById('elem138');
+document.addEventListener('mouseover', function(event) {
+	elem138.innerHTML = event.clientX + ' : ' + event.clientY;
+});
