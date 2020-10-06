@@ -7582,3 +7582,12 @@ elem134.addEventListener('blur', function(){
 	(elem134.value.length >= elem134.dataset.min && 
 	elem134.value.length <= elem134.dataset.max) ? true : alert('less than 5 or more than 10');
 });
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Пользовательские атрибуты с дефисами в JavaScript
+let elem135 = document.querySelector('#elem135');
+elem135.addEventListener('click', function(){
+	elem135.innerHTML += ' ' + elem135.dataset.productPrice * elem135.dataset.productAmount;
+});
