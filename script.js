@@ -7623,3 +7623,18 @@ let elem138 = document.getElementById('elem138');
 document.addEventListener('mouseover', function(event) {
 	elem138.innerHTML = event.clientX + ' : ' + event.clientY;
 });
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Тип события в объекте Event в JavaScript
+let elem139 = document.querySelector('#elem139');
+elem139.addEventListener('click', func139);
+elem139.addEventListener('dblclick', func139);
+function func139(event) {
+	if (event.type == 'click') {
+		this.style.color = 'green';
+	} else if (event.type == 'dblclick') {
+		this.style.color = 'red';
+	}
+}
