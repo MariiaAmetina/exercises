@@ -7705,3 +7705,22 @@ func145.call(elem144);
 func145.call(elem145);
 
 
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Привязывание контекста через метод apply в JavaScript
+let elem146 = document.querySelector('#elem146');
+function func146(surname, name) {
+	console.log(this.value + ', ' + surname + ' ' + name);
+}
+func146.apply(elem146, ['Ivanov', 'Ivan']);
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Привязывание контекста через метод bind в JavaScript
+let elem147 = document.querySelector('#elem147');
+function func147(surname, name) {
+	console.log(this.value + ', ' + surname + ' ' + name);
+}
+func147 = func147.bind(elem147);
+func147('Иванов', 'Иван');
+func147('Петров', 'Петр');
