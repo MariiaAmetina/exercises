@@ -7782,3 +7782,18 @@ let time2 = setInterval( () => {
 
 	(timeCount == 0) ? clearInterval(time2) : false;
 }, 1000);
+
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Кнопка для запуска таймера на JavaScript
+
+//1 Сделайте кнопку, по нажатию на которую в консоль будет выводится обратный отсчет, начиная с 100.
+let button148 = document.querySelector('#button148');
+button148.addEventListener('click', function func148() {
+	let i = 100;
+	setInterval(() => console.log(--i), 1000);
+
+	this.removeEventListener('click', func148);
+});
