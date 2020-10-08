@@ -7659,3 +7659,49 @@ a142.addEventListener('click', function(event){
 	event.preventDefault();
 	p142.innerHTML = Number(elem141.value) + Number(elem142.value);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Контекст непривязанной функции в JavaScript
+
+function func11111() {
+	console.log(this); // undefined
+}
+func11111();
+console.log(this);
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Привязывание контекста через метод call в JavaScript
+
+//1 С помощью метода call и функции func выведите на экран value каждого из инпутов.
+let elem143 = document.querySelector('#elem143');
+let elem144 = document.querySelector('#elem144');
+let elem145 = document.querySelector('#elem145');
+
+function func145() {
+	console.log(this.value);
+}
+func145.call(elem143);
+func145.call(elem144);
+func145.call(elem145);
+
+
