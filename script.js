@@ -7641,4 +7641,21 @@ function func139(event) {
 
 ////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////
-//
+//Отмена действия по умолчанию в JavaScript
+
+//1 Даны ссылки. Сделайте так, чтобы по клику на ссылку ей в конец записывался ее href, а перехода по ссылке не происходило.
+let a140 = document.querySelector('#a140');
+a140.addEventListener('click', function(event) {
+	event.preventDefault();
+	a140.innerHTML += a140.href;
+});
+
+//2 Даны два инпута, абзац и ссылка. Пусть в инпуты вводятся числа. Сделайте так, чтобы по клику на ссылку в абзац записалась сумма введенных чисел.
+let elem141 = document.querySelector('#elem141');
+let elem142 = document.querySelector('#elem142');
+let p142 = document.querySelector('#p142');
+let a142 = document.querySelector('#a142');
+a142.addEventListener('click', function(event){
+	event.preventDefault();
+	p142.innerHTML = Number(elem141.value) + Number(elem142.value);
+});
