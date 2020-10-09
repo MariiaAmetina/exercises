@@ -7797,3 +7797,28 @@ button148.addEventListener('click', function func148() {
 
 	this.removeEventListener('click', func148);
 });
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Кнопки для запуска и остановки таймера на JavaScript
+
+
+//1 Пусть дана переменная, в которой изначально хранится число 100. Даны также две кнопки. По нажатию на первую кнопку запустите таймер, который каждую секунду будет уменьшать значение переменной на 1 и выводить новое значение в консоль. Как только значение переменной достигнет нуля - остановите таймер.
+//По нажатию на вторую кнопку остановите таймер. Также остановите таймер, если вторая кнопка не была нажата, но значение переменной достигло нуля.
+
+let button149 = document.querySelector('#button149');
+let button150 = document.querySelector('#button150');
+let count149 = 10;
+let timer149;
+button149.addEventListener('click', function func149(){
+	timer149 = setInterval( () => {
+		console.log(count149--);
+		if (count149 <= 0) {
+			clearInterval(timer149);
+		}
+	}, 1000);
+	this.removeEventListener('click', func149)
+});
+button150.addEventListener('click', function(){
+	clearInterval(timer149);
+});
