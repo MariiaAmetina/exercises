@@ -7135,9 +7135,7 @@ let elem88 = document.querySelector('#elem88');
 
 elem85.addEventListener('blur', function(){
 	let arr = elem85.value.split(' ');
-	elem86.value = arr[0];
-	elem87.value = arr[1];
-	elem88.value = arr[2];
+	[elem86.value, elem87.value, elem88.value] = arr;
 });
 
 //6 Дан инпут. В него вводится ФИО через пробел. ФИО вводится с маленькой буквы. Сделайте так, чтобы по потери фокуса инпутом, введенные фамилия, имя и отчество автоматически стали записанными с большой буквы (в этом же инпуте).
@@ -7876,3 +7874,74 @@ elem153.addEventListener('click', function(){
 		self.value--;
 	}, 1000, this);
 });
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Практика на таймеры и работу с DOM в JavaScript
+
+//1 Дана кнопка. Дан абзац, текстом которого является число. По нажатию на кнопку запустите таймер, который каждую секунду будет увеличивать текст абзаца на 1.
+let elem154 = document.querySelector('#elem154');
+let text154 = document.querySelector('#text154');
+
+elem154.addEventListener('click', function func154(){
+	setInterval(function() {
+		text154.innerHTML = Number(text154.innerHTML) + 1;
+
+	}, 1000);
+	this.removeEventListener('click', func154);
+});
+
+//2 Дана кнопка. Дан абзац, текстом которого является число, например, 10. По нажатию на кнопку запустите таймер, который каждую секунду будет уменьшать текст абзаца на 1. Как только значение абзаца станет равно нулю - остановите таймер.
+let button155 = document.querySelector('#button155');
+let text155 = document.querySelector('#text155');
+button155.addEventListener('click', function(){
+	let timerId = setInterval(function(){
+		text155.innerHTML = +text155.innerHTML - 1;
+		(text155.innerHTML) === '0' ? clearInterval(timerId) : false;
+	}, 1000);
+	
+});
+
+//3 Дан инпут с числом. Сделайте так, чтобы каждую секунду в нем появлялся квадрат того числа, которое в нем записано.
+let elem156 = document.querySelector('#elem156');
+// setInterval(function(){
+// 	elem156.value = Number(elem156.value) ** 2;
+// }, 2000);
+
+//4 Дан инпут. В него вводится число. По потери фокуса сделайте так, чтобы в абзаце ниже начал тикать обратный отсчет, начиная с введенного числа. Когда отсчет дойдет до нуля - он должен закончится.
+let elem157 = document.querySelector('#elem157');
+let text157 = document.querySelector('#text157');
+elem157.addEventListener('blur', function(){
+	text157.innerHTML = elem157.value;
+	let timerId = setInterval(function(){
+		text157.innerHTML = Number(text157.innerHTML) - 1;
+		(text157.innerHTML === '0') ? clearInterval(timerId) : false;
+	}, 1000);
+});
+
+//5 Дан инпут, кнопка и абзац. В инпут вводится какое-то число. По нажатию на кнопку запишите введенное число в текст абзаца и запустите обратный отсчет в абзаце: пусть каждую секунду число в абзаце уменьшается на единицу, пока не дойдет до нуля.
+//6 Дан абзац и две кнопки. Сделайте так, чтобы по нажатию на первую кнопку в абзаце начал тикать таймер от 1 до бесконечности, а по нажатию на вторую таймер останавливался.
+let text158 = document.querySelector('#text158');
+let button158 = document.querySelector('#button158');
+let button159 = document.querySelector('#button159');
+
+let timerId158;
+button158.addEventListener('click', function(){
+	timerId158 = setInterval(() => {text158.innerHTML = Number(text158.innerHTML) + 1}, 1000);
+});
+button159.addEventListener('click', () => clearInterval(timerId158));
+
+//7 Дан абзац. Сделайте так, чтобы каждую секунду он менял свой цвет с красного на зеленый и наоборот.
+let text160 = document.querySelector('#text160');
+text160.style.color = 'green';
+setInterval(() => {
+	text160.style.color == 'red' ? text160.style.color = 'green' : text160.style.color = 'red'
+}, 1000);
+
+//8 Если выводить на экран каждую секунду текущий момент времени, то можно сделать тикающие часы. Реализуйте такие же часики, как показано ниже в образце:
+let text161 = document.querySelector('#text161');
+setInterval(() => {
+	let date = new Date();
+	text161.innerHTML = date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+}, 1000);
