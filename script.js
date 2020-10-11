@@ -7996,3 +7996,21 @@ button164.addEventListener('click', () => {
 	li164.innerHTML = 'пунктик';
 	elem164.appendChild(li164);
 });
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Привязывание событий при вставке элементов
+
+//Дан ol и кнопка. Сделайте так, чтобы по клику на кнопку в конец ol добавлялся тег li. Сделайте так, чтобы по клику на любой из добавленных li в конец его текста записывался восклицательный знак.
+let elem165 = document.querySelector('#elem165');
+let button165 = document.querySelector('#button165');
+
+button165.addEventListener('click', () => {
+	let li165 = document.createElement('li');
+	elem165.appendChild(li165);
+	li165.addEventListener('click', () => {
+		li165.innerHTML = '!';
+	});
+});
+
