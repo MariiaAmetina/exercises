@@ -7852,8 +7852,27 @@ let elem152 = document.querySelector('#elem152');
 // 	}, 2000);
 // });
 
-elem152.addEventListener('click', function(){
-	setInterval(() => {
-		this.value = Number(this.value) + 1;
-	}, 1000);
+// elem152.addEventListener('click', function(){
+// 	setInterval(() => {
+// 		this.value = Number(this.value) + 1;
+// 	}, 1000);
+// });
+
+elem152.addEventListener('click', function() {
+	function func152(self) {
+		return function(){
+			self.value = Number(self.value) + 1;
+		}
+	}
+	setInterval(func152(this), 1000);
+});
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Передача контекста параметром функции setInterval
+let elem153 = document.querySelector('#elem153');
+elem153.addEventListener('click', function(){
+	setInterval(function(self){
+		self.value--;
+	}, 1000, this);
 });
