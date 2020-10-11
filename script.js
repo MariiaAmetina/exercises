@@ -7945,3 +7945,23 @@ setInterval(() => {
 	let date = new Date();
 	text161.innerHTML = date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
 }, 1000);
+
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Функция setTimeout в JavaScript
+
+//1 Дан абзац. Напишите код, который выведет сообщение в этот абзац через 10 секунд после загрузки страницы.
+let text162 = document.querySelector('#text162');
+setTimeout(() => {
+	text162.innerHTML = 'приветули - красотули';
+}, 5000);
+
+//2 Выведите в консоль число 0. Через секунду выведите число 1, через две секунды выведите число 2, через 3 секунды выведите число 3. И так далее до бесконечности.
+let timeOut = 0;
+timerOut();
+function timerOut(){
+	console.log(timeOut++);
+	setTimeout(timerOut, timeOut * 1000);
+}
