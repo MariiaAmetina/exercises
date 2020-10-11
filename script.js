@@ -7965,3 +7965,34 @@ function timerOut(){
 	console.log(timeOut++);
 	setTimeout(timerOut, timeOut * 1000);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Создание и вставка элементов на JavaScript
+
+//1 Дан ol: Вставьте ему в конец li с текстом 'пункт'.
+let elem163 = document.querySelector('#elem163');
+let li163 = document.createElement('li');
+li163.innerHTML = 'пункт';
+elem163.appendChild(li163);
+
+//2 Дан ol и кнопка: Сделайте так, чтобы по клику на кнопку в конец списка добавлялся li с текстом 'пункт'.
+let elem164 = document.querySelector('#elem164');
+let button164 = document.querySelector('#button164');
+
+button164.addEventListener('click', () => {
+	let li164 = document.createElement('li');
+	li164.innerHTML = 'пунктик';
+	elem164.appendChild(li164);
+});
