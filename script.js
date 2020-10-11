@@ -7839,3 +7839,21 @@ let timerId = setInterval(function(){
 	}
 	
 }, 1000);
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Таймеры и потеря контекста в JavaScript
+let elem152 = document.querySelector('#elem152');
+// elem152.addEventListener('click', function(){
+// 	let self = this;
+// 	setInterval(function(){
+// 		self.value = Number(self.value) + 1;
+// 	}, 2000);
+// });
+
+elem152.addEventListener('click', function(){
+	setInterval(() => {
+		this.value = Number(this.value) + 1;
+	}, 1000);
+});
