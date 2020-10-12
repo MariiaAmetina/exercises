@@ -8064,3 +8064,30 @@ for (let elem of arr168) {
 		p168.innerHTML = Number(p168.innerHTML) + 1;
 	});
 }
+
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Практика на создание списков ul на JavaScript
+
+//1 Дан массив. Выведите его элементы в виде списка ul так, чтобы каждый элемент попал в свою li.
+//2 Модифицируйте предыдущую задачу так, чтобы по клику на li ей в конец добавлялся '!'.
+//3Модифицируйте предыдущую задачу так, чтобы по повторное нажатие на li не приводило к добавлению второго '!'.
+let elem169 = document.querySelector('#elem169');
+let arr169 = [2, 7, 9, 4, 76];
+for (let elem of arr169) {
+	let li169 = document.createElement('li');
+	li169.innerHTML = elem;
+
+	elem169.appendChild(li169);
+
+	li169.addEventListener('click', function func169() {
+		li169.innerHTML += '!';
+
+		this.removeEventListener('click', func169);
+	});
+}
+
+
+//
