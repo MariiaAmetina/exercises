@@ -8046,3 +8046,21 @@ for (let i = 1; i <= 5; i++) {
 
 	elem167.appendChild(input167);
 }
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Создание элементов из массива на JavaScript
+
+let elem168 = document.querySelector('#elem168');
+let arr168 = [1, 2, 3, 4, 5];
+
+for (let elem of arr168) {
+	let p168 = document.createElement('p');
+	p168.innerHTML = elem;
+	elem168.appendChild(p168);
+
+	p168.addEventListener('click', () => {
+		p168.innerHTML = Number(p168.innerHTML) + 1;
+	});
+}
