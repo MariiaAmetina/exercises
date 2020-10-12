@@ -8090,4 +8090,39 @@ for (let elem of arr169) {
 }
 
 
-//
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Создание HTML таблиц на JavaScript
+
+//1 Дана пустая HTML таблица. С помощью двух вложенных циклов for заполните эту таблицу 5-ю рядами с 5-ю колонками.
+let table170 = document.querySelector('#table170');
+for (let i = 0; i < 10; i++) {
+	let tr170 = document.createElement('tr');
+	
+	for (let i = 0; i < 5; i++) {
+		let td170 = document.createElement('td');
+		tr170.appendChild(td170);
+
+		td170.innerHTML = 'x';
+	}
+	table170.appendChild(tr170);
+}
+
+//4 Реализуйте генератор таблиц, ширина и высота таблиц задается в двух инпутах (например, таблица 5 на 10 ячеек).
+let input171 = document.querySelector('#input171');
+let input172 = document.querySelector('#input172');
+let button172 = document.querySelector('#button172');
+let table172 = document.querySelector('#table172');
+
+button172.addEventListener('click', () => {
+	for (let i = 0; i < Number(input171.value); i++) {
+		let tr171 = document.createElement('tr');
+
+		for (let i = 0; i < Number(input172.value); i++) {
+			let td172 = document.createElement('td');
+			tr171.appendChild(td172);
+			td172.innerHTML = i;
+		}
+		table172.appendChild(tr171);
+	}
+});
