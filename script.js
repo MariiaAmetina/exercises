@@ -8027,3 +8027,22 @@ for (let i = 1; i <= 10; i++) {
 	li166.innerHTML = i;
 	ul166.appendChild(li166);
 }
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Навешивание обработчиков в цикле на JavaScript
+
+//Дан див. Запустите цикл, который добавит в наш див 5 инпутов. Пусть дан также абзац. Сделайте так, чтобы каждый из новых инпутов по потери фокуса записывал свой текст в абзац.
+let elem167 = document.querySelector('#elem167');
+let text167 = document.querySelector('#text167');
+
+for (let i = 1; i <= 5; i++) {
+	let input167 = document.createElement('input');
+
+	input167.addEventListener('blur', () => {
+		text167.innerHTML += input167.value;
+	});
+
+	elem167.appendChild(input167);
+}
