@@ -8136,14 +8136,14 @@ button172.addEventListener('click', () => {
 
 //1 Выведите на экран таблицу table размером 5 рядов на 5 колонок так, чтобы в ее ячейках последовательно стояли числа от 1 до 25.
 let table173 = document.querySelector('#table173');
-let k = 1;
+let k = 2;
 for (let i = 0; i < 5; i++) {
 	let tr = document.createElement('tr');
 	
 	for (let i = 0; i < 5; i++) {
 		let td = document.createElement('td');
 		td.innerHTML = k;
-		k++;
+		k += 2;
 		tr.appendChild(td);
 	}
 	
@@ -8151,3 +8151,26 @@ for (let i = 0; i < 5; i++) {
 }
 
 //2 Модифицируйте предыдущую задачу так, чтобы в ячейках таблицы были записаны четные числа в промежутке от 2 до 50.
+
+
+
+
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Создание HTML таблицы из массива на JavaScript
+
+//1 Не подсматривая в теоретическую часть урока, выведите элементы приведенного массива в виде HTML таблицы table.
+let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]; 
+let table174 = document.querySelector('#table174');
+for (let subArr of arr) {
+	let tr = document.createElement('tr');
+
+	for (let elem of subArr) {
+		let td = document.createElement('td');
+		td.innerHTML = elem;
+		tr.appendChild(td);
+	}
+	table174.appendChild(tr);
+}
