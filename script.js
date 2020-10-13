@@ -8126,3 +8126,28 @@ button172.addEventListener('click', () => {
 		table172.appendChild(tr171);
 	}
 });
+
+
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Последовательное заполнение HTML таблиц
+
+//1 Выведите на экран таблицу table размером 5 рядов на 5 колонок так, чтобы в ее ячейках последовательно стояли числа от 1 до 25.
+let table173 = document.querySelector('#table173');
+let k = 1;
+for (let i = 0; i < 5; i++) {
+	let tr = document.createElement('tr');
+	
+	for (let i = 0; i < 5; i++) {
+		let td = document.createElement('td');
+		td.innerHTML = k;
+		k++;
+		tr.appendChild(td);
+	}
+	
+	table173.appendChild(tr);
+}
+
+//2 Модифицируйте предыдущую задачу так, чтобы в ячейках таблицы были записаны четные числа в промежутке от 2 до 50.
