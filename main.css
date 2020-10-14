@@ -24,3 +24,12 @@ img {
 #elem78.active {
 	display: block;
 }
+
+td {
+	width: 50px;
+	height: 50px;
+	border: 1px solid black;
+}
+table {
+    border-collapse: collapse;
+}

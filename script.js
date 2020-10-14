@@ -8213,3 +8213,44 @@ for (let employee of employees) {
 //2 Модифицируйте предыдущую задачу так, чтобы по клику на любую ячейку с возрастом ее содержимое увеличивалось на 1.
 //3 Модифицируйте предыдущую задачу так, чтобы по клику на любую ячейку с зарплатой ее содержимое увеличивалось на 10%.
 
+
+
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Добавление рядов и колонок в HTML таблицу
+
+//1 Сделайте кнопку, по нажатию на которую в таблицу будет добавляться новый ряд.
+let table176 = document.querySelector('#table176');
+let button176 = document.querySelector('#button176');
+
+button176.addEventListener('click', () => {
+	let tr = document.createElement('tr');
+	for (let i = 0; i < 6; i++) {
+		let td = document.createElement('td');
+		td.innerHTML = 'mmm';
+		tr.appendChild(td);
+	}
+	table176.appendChild(tr);
+});
+
+//2 Дана также кнопка. Сделайте так, чтобы по нажатию на кнопку таблица увеличивалась на один ряд и на одну колонку.
+let table177 = document.querySelector('#table177');
+let button177 = document.querySelector('#button177');
+let trs = document.querySelectorAll('#table177 tr');
+button177.addEventListener('click', () => {
+	for (let tr of trs) {
+		let tdd = document.createElement('td');
+		tr.appendChild(tdd);
+
+		let newTr = document.createElement('tr');
+		for (let i = 0; i < tdd; i++) {
+			let newtd = document.createElement('td');
+			newTr.appendChild(newtd);
+		}
+		table177.appendChild(newTr);
+	}
+	
+
+});
