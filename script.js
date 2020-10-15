@@ -8238,19 +8238,22 @@ button176.addEventListener('click', () => {
 //2 Дана также кнопка. Сделайте так, чтобы по нажатию на кнопку таблица увеличивалась на один ряд и на одну колонку.
 let table177 = document.querySelector('#table177');
 let button177 = document.querySelector('#button177');
-let trs = document.querySelectorAll('#table177 tr');
+
+
 button177.addEventListener('click', () => {
-	for (let tr of trs) {
-		let tdd = document.createElement('td');
-		tr.appendChild(tdd);
+	let trs = document.querySelectorAll('#table177 tr');
+	let tr = document.createElement('tr');
+	table177.appendChild(tr);
 
-		let newTr = document.createElement('tr');
-		for (let i = 0; i < tdd; i++) {
-			let newtd = document.createElement('td');
-			newTr.appendChild(newtd);
-		}
-		table177.appendChild(newTr);
+	for (let elem of trs) {
+		let td = document.createElement('td');
+		td.innerHTML = 'a';
+		elem.appendChild(td);
 	}
-	
 
+	for (let i = 0; i <= trs.length; i++) {
+		let td = document.createElement('td');
+		td.innerHTML = 'z';
+		tr.appendChild(td);
+	}
 });
