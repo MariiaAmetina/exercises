@@ -8383,3 +8383,16 @@ let elem186 = document.querySelector('#elem186');
 //elem186.addEventListener('click', () => elem186.parentElement.removeChild(elem186));
 elem186.addEventListener('click', () => elem186.remove());
 
+
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Самоудаление элементов на JavaScript
+let parent187 = document.querySelector('#parent187');
+let lis187 = document.querySelectorAll('#parent187 li');
+for (let li of lis187) {
+	li.addEventListener('click', () => {
+		parent187.removeChild(li);
+	});
+}
