@@ -8438,3 +8438,38 @@ remove189.addEventListener('click', (event) => {
 	elem189.remove();
 	event.preventDefault();
 });
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Создание ссылок для удаление элементов на JavaScript
+
+//1 Дан тег ul. Добавьте в конец каждого тега li ссылку на удаления этого li из списка.
+let lis190 = document.querySelectorAll('#parent190 li');
+for (let li of lis190) {
+	let remove190 = document.createElement('a');
+	remove190.href = '';
+	remove190.innerHTML = ' remove it';
+	li.appendChild(remove190);
+
+	remove190.addEventListener('click', (event) => {
+		li.remove();
+		event.preventDefault();
+	});
+}
+
+//2 Дана HTML таблица. Добавьте в нее еще одну колонку, в которой для каждого ряда таблицы будет стоять ссылка на удаление этого ряда.
+let trs191 = document.querySelectorAll('#table191 tr');
+for (let tr of trs191) {
+	let td = document.createElement('td');
+	tr.appendChild(td);
+	let a = document.createElement('a');
+	a.href = '';
+	a.innerHTML = 'remove';
+	td.appendChild(a);
+
+	a.addEventListener('click', (event) => {
+		tr.remove();
+		event.preventDefault();
+	});
+}
