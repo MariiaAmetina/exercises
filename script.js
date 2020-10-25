@@ -8287,3 +8287,21 @@ let i179 = tds179.length;
 for (let td of tds179) {
 	td.innerHTML = i179--;
 }
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Номер колонки и ряда таблицы на JavaScript
+
+//Дана HTML таблица. Запишите в каждую ячейку ее порядковый номер в ряду.
+let trs180 = document.querySelectorAll('#table180 tr');
+
+for (let i = 0; i < trs180.length; i++) {
+	let tr = trs180[i];
+	let tds = tr.querySelectorAll('td');
+
+	for (let j = 0; j < tds.length; j++) {
+		let td = tds[j];
+		td.innerHTML = i + '.' + j;
+	}
+}
