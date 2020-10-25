@@ -8257,3 +8257,20 @@ button177.addEventListener('click', () => {
 		tr.appendChild(td);
 	}
 });
+
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Изменение ячеек HTML таблицы на JavaScript
+
+
+//Пусть дана некоторая HTML таблица с числами и кнопка. По нажатию на кнопку увеличьте число в каждой ячейки таблицы в два раза.
+let button178 = document.querySelector('#button178');
+let tds = document.querySelectorAll('#table178 td');
+
+button178.addEventListener('click', () => {
+	for (let td of tds) {
+		td.innerHTML **= 2;
+	}
+})
