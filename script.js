@@ -8425,3 +8425,16 @@ for (let li of li188) {
 		parent188.removeChild(li);
 	});
 }
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Ссылка на удаление элемента на JavaScript
+
+//Пусть у нас абзац. Давайте рядом с ним сделаем ссылку, с помощью которой этот абзац можно будет удалить.
+let elem189 = document.querySelector('#elem189');
+let remove189 = document.querySelector('#remove189');
+remove189.addEventListener('click', (event) => {
+	elem189.remove();
+	event.preventDefault();
+});
