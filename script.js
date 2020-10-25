@@ -8349,3 +8349,37 @@ for (let td of tds183) {
 		}
 	});
 }
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Удаление элементов на JavaScript
+
+//Сделайте так, чтобы по нажатию на кнопку удалялся элемент #elem.
+let parent184 = document.querySelector('#parent184');
+let elem184 = document.querySelector('#elem184');
+let button184 = document.querySelector('#button184');
+
+button184.addEventListener('click', () => {
+	parent184.removeChild(elem184);
+});
+
+// Сделайте так, чтобы по каждому клику на кнопку удалялся последний элемент из #parent.
+let parent185 = document.querySelector('#parent185');
+let button185 = document.querySelector('#button185');
+
+button185.addEventListener('click', () => {
+	parent185.removeChild(parent185.lastChild);
+});
+
+//Сделайте так, чтобы по нажатию на #elem этот элемент удалился.
+let elem186 = document.querySelector('#elem186');
+//elem186.addEventListener('click', () => elem186.parentElement.removeChild(elem186));
+elem186.addEventListener('click', () => elem186.remove());
+
