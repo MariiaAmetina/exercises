@@ -8396,3 +8396,32 @@ for (let li of lis187) {
 		parent187.removeChild(li);
 	});
 }
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Самоудаление новых элементов на JavaScript
+//Сделайте так, чтобы по клику на кнопку в список добавлялся новый элемент. 
+//Сделайте так, чтобы любая li удалялась по клику на нее. 
+//Речь идет как о тех li, которые уже есть в списке, так о новых, созданных после нажатия на кнопку.
+
+
+let parent188 = document.querySelector('#parent188');
+let li188 = document.querySelectorAll('#parent188 li');
+let button188 = document.querySelector('#button188');
+
+button188.addEventListener('click', () => {
+	let liN = document.createElement('li');
+	liN.innerHTML = 'new';
+
+	liN.addEventListener('click', () => {
+		liN.remove();
+	});
+	parent188.appendChild(liN);
+});
+
+for (let li of li188) {
+	li.addEventListener('click', () => {
+		parent188.removeChild(li);
+	});
+}
