@@ -8318,3 +8318,34 @@ for (let i = 0; i < tds181.length; i++) {
 		tds181[i].innerHTML = i;
 	});
 }
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Порядковый номер клика в ячейке HTML таблицы
+
+let tds182 = document.querySelectorAll('#table182 td');
+let i182 = 1;
+for (let td of tds182) {
+	td.addEventListener('click', function func182() {
+		this.innerHTML = i182;
+		i182++;
+		this.removeEventListener('click', func182);
+	});
+}
+
+
+//Модифицируйте описанную в теоретической части урока задачу так, чтобы при кликах на ячейки чередовались числа 1, 2 и 3.
+let tds183 = document.querySelectorAll('#table183 td');
+let i183 = 1;
+for (let td of tds183) {
+	td.addEventListener('click', () => {
+		td.innerHTML = i183;
+		if (i183 == 1) {
+			i183 = 2;
+		} else if (i183 == 2) {
+			i183 = 3;
+		} else if (i183 == 3) {
+			i183 = 1;
+		}
+	});
+}
