@@ -8496,3 +8496,27 @@ let newLi = document.createElement('li');
 newLi.innerHTML = 'new';
 parent194.insertBefore(newLi, elem194);
 newLi.addEventListener('click', () => {newLi.innerHTML += '!'});
+
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Смежная вставка элементов на JavaScript
+let elem196 = document.querySelector('#elem196');
+let befBeg = document.createElement('p');
+befBeg.innerHTML = 'before begin';
+elem196.insertAdjacentElement('beforebegin', befBeg);
+
+let afEnd = document.createElement('p');
+afEnd.innerHTML = 'after end';
+elem196.insertAdjacentElement('afterend', afEnd);
+
+let afBeg = document.createElement('p');
+afBeg.innerHTML = 'after begin';
+elem196.insertAdjacentElement('afterbegin', afBeg);
+
+let befEn = document.createElement('p');
+befEn.innerHTML = 'before end';
+elem196.insertAdjacentElement('beforeend', befEn);
+
+elem196.insertAdjacentHTML('beforebegin', '<div class="www"><p>text</p><p>text</p><input></div>');
