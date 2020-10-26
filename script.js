@@ -8520,3 +8520,21 @@ befEn.innerHTML = 'before end';
 elem196.insertAdjacentElement('beforeend', befEn);
 
 elem196.insertAdjacentHTML('beforebegin', '<div class="www"><p>text</p><p>text</p><input></div>');
+
+
+
+
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Клонирование элементов на JavaScript
+
+//Дан инпут. Дана кнопка. По нажатию на кнопку клонируйте этот инпут.
+let parent197 = document.querySelector('#parent197');
+let elem197 = parent197.querySelector('.elem197');
+let button197 = document.querySelector('#button197');
+button197.addEventListener('click', () => {
+	let clone = elem197.cloneNode(true);
+	parent197.appendChild(clone);
+});
