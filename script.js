@@ -8538,3 +8538,19 @@ button197.addEventListener('click', () => {
 	let clone = elem197.cloneNode(true);
 	parent197.appendChild(clone);
 });
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Проверка элементов в JavaScript
+
+//1 Проверьте, является ли этот элемент элементом с классом www.
+let elem198 = document.querySelector('#elem198');
+console.log(elem198.matches('.www'));
+
+console.log(elem198.matches('p'));
+
+//Проверьте, является ли элемент из elem2 потомком элемента из elem1.
+let elem199 = document.querySelector('#elem199');
+let elem200 = document.querySelector('#elem200');
+console.log(elem199.contains(elem200));
