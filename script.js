@@ -8473,3 +8473,26 @@ for (let tr of trs191) {
 		event.preventDefault();
 	});
 }
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Вставка элементов в начало или в конец на JavaScript
+
+//Вставьте ему в начало элемент с текстом 'start', а в конец - элемент с текстом 'finish'.
+let elem192 = document.querySelector('#elem192');
+let li192 = document.createElement('li');
+let li193 = document.createElement('li');
+li192.innerHTML = 'start';
+li193.innerHTML = 'finish';
+elem192.prepend(li192);
+elem192.append(li193);
+
+
+//Вставьте перед этим элементом элемент с текстом 'new'.
+let parent194 = document.querySelector('#parent194');
+let elem194 = document.querySelector('#elem194');
+let newLi = document.createElement('li');
+newLi.innerHTML = 'new';
+parent194.insertBefore(newLi, elem194);
+newLi.addEventListener('click', () => {newLi.innerHTML += '!'});
