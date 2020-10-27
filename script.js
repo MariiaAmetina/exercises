@@ -8554,3 +8554,34 @@ console.log(elem198.matches('p'));
 let elem199 = document.querySelector('#elem199');
 let elem200 = document.querySelector('#elem200');
 console.log(elem199.contains(elem200));
+
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Редактирование отдельного элемента на JavaScript
+
+
+//Модифицируйте приведенный выше код так, чтобы текст абзаца менялся не по потери фокуса, а по мере ввода текста в инпут.
+let elem201 = document.querySelector('#elem201');
+let input201 = document.querySelector('#input201');
+
+input201.value = elem201.innerHTML;
+input201.addEventListener('input', function() {
+	elem201.innerHTML = this.value;
+});
+
+
+//Давайте теперь сделаем так, чтобы инпута изначально не было на странице, а он появлялся по клику на абзац.
+let elem202 = document.querySelector('#elem202');
+elem202.addEventListener('click', function() {
+	let input = document.createElement('input');
+	input.value = elem202.innerHTML;
+
+	input.addEventListener('blur', function() {
+		elem202.innerHTML = this.value;
+		this.parentElement.removeChild(this);
+	});
+
+	elem202.parentElement.appendChild(input);
+});
