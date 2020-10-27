@@ -8585,3 +8585,25 @@ elem202.addEventListener('click', function() {
 
 	elem202.parentElement.appendChild(input);
 });
+
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Прячем текст при редактировании элемента на JavaScript
+
+//Давайте теперь сделаем так, чтобы при редактировании инпут появлялся в самом абзаце - вместо текста этого абзаца. Пусть затем при окончании редактирования инпут будет убираться, а вместо него опять появляться текст абзаца.
+let elem203 = document.querySelector('#elem203');
+elem203.addEventListener('click', function func203() {
+	let input = document.createElement('input');
+	input.value = elem203.innerHTML;
+	elem203.innerHTML = '';
+	elem203.appendChild(input);
+
+	input.addEventListener('blur', function() {
+		elem203.innerHTML = input.value;
+		elem203.addEventListener('click', func203);
+	});
+
+	elem203.removeEventListener('click', func203);
+});
