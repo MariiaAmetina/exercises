@@ -8607,3 +8607,47 @@ elem203.addEventListener('click', function func203() {
 
 	elem203.removeEventListener('click', func203);
 });
+
+
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Редактирование в группе элементов на JavaScript
+
+
+//1 Дан тег ul. Сделайте так, чтобы по клику на любую li в ней появлялся инпут, с помощью которого можно будет поредатировать текст этой li.
+let lis204 = document.querySelectorAll('#ul204 li');
+for (let elem of lis204) {
+	elem.addEventListener('click', function func204 () {
+		let input = document.createElement('input');
+		input.value = elem.innerHTML;
+		elem.innerHTML = '';
+		elem.appendChild(input);
+
+		input.addEventListener('blur', function() {
+			elem.innerHTML = input.value;
+			elem.addEventListener('click', func204);
+		});
+		elem.removeEventListener('click', func204);
+	});
+}
+
+
+//2 Дана HTML таблица. Сделайте так, чтобы по клику на любую ячейку в ней появлялся инпут для редактирования текста этой ячейки.
+let tds205 = document.querySelectorAll('#table205 td');
+for (let td of tds205) {
+	td.addEventListener('click', function func205() {
+		let input = document.createElement('input');
+		input.value = td.innerHTML;
+		td.innerHTML = '';
+		td.appendChild(input);
+
+		input.addEventListener('blur', function() {
+			td.innerHTML = input.value;
+			td.addEventListener('click', func205);
+		});
+
+		td.removeEventListener('click', func205);
+	});
+}
