@@ -8856,3 +8856,20 @@ for (let button of buttons215) {
 		this.previousElementSibling.classList.toggle('hidden');
 	});
 }
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+//Активация элементов на JavaScript
+
+//1 Дана HTML список ul. Сделайте так, чтобы по нажатию на любой пункт списка он активировался красным фоном.
+let uls216 = document.querySelectorAll('#ul216 li');
+for (let li of uls216) {
+	li.addEventListener('click', function () {
+		li.classList.toggle('active');
+	});
+}

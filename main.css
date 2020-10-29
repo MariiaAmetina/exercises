@@ -39,3 +39,7 @@ table {
 .hidden {
 	display: none;
 }
+
+.active {
+	background: rgb(151, 17, 40);
+}
