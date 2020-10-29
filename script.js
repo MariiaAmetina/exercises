@@ -8873,3 +8873,32 @@ for (let li of uls216) {
 		li.classList.toggle('active');
 	});
 }
+
+
+/////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+//Чередование стилей активации на JavaScript
+
+//1 Давайте теперь сделаем так, чтобы происходило чередование цветов: пусть первая ячейка красится в красный, вторая - в зеленый, третья - опять в красный и так далее.
+let tds217 = document.querySelectorAll('#table217 td');
+let color217 = 'color1';
+for (let td of tds217) {
+	td.addEventListener('click', function() {
+		(color217 == 'color1') ? color217 = 'color2' : color217 = 'color1';
+
+		this.classList.toggle(color217);
+	});
+}
+
+/////Чередование многих цветов из массива
+let tds218 = document.querySelectorAll('#table218 td');
+let colors = ['color1', 'color2', 'color3'];
+let i = 0;
+for (let td of tds218) {
+	td.addEventListener('click', function() {
+		this.classList.add(colors[i]);
+		i++;
+
+		(i == colors.length) ? i = 0 : false;
+	});
+}
