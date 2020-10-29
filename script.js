@@ -7953,18 +7953,18 @@ setInterval(() => {
 //Функция setTimeout в JavaScript
 
 //1 Дан абзац. Напишите код, который выведет сообщение в этот абзац через 10 секунд после загрузки страницы.
-let text162 = document.querySelector('#text162');
-setTimeout(() => {
-	text162.innerHTML = 'приветули - красотули';
-}, 5000);
+// let text162 = document.querySelector('#text162');
+// setTimeout(() => {
+// 	text162.innerHTML = 'приветули - красотули';
+// }, 5000);
 
 //2 Выведите в консоль число 0. Через секунду выведите число 1, через две секунды выведите число 2, через 3 секунды выведите число 3. И так далее до бесконечности.
-let timeOut = 0;
-timerOut();
-function timerOut(){
-	console.log(timeOut++);
-	setTimeout(timerOut, timeOut * 1000);
-}
+// let timeOut = 0;
+// timerOut();
+// function timerOut(){
+// 	console.log(timeOut++);
+// 	setTimeout(timerOut, timeOut * 1000);
+// }
 
 
 
@@ -8649,5 +8649,102 @@ for (let td of tds205) {
 		});
 
 		td.removeEventListener('click', func205);
+	});
+}
+
+
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//Одновременное редактирование и удаление элементов
+
+//????????????1Добавьте ссылку на удаление в конец каждого абзаца.
+//Сделайте так, чтобы по клику на span в нем появлялся инпут для редактирования
+let parent206 = document.querySelector('#parent206');
+let spans = document.querySelectorAll('#parent206 p span');
+let ps206 = document.querySelectorAll('#parent206 p');
+
+for (let span206 of spans) {
+	span206.addEventListener('click', function func206() {
+		let input = document.createElement('input');
+		input.value = span206.innerHTML;
+		span206.innerHTML = '';
+		span206.appendChild(input);
+
+		input.addEventListener('blur', function() {
+			span206.innerHTML = input.value;
+			span206.addEventListener('click', func206);
+		});
+
+		span206.removeEventListener('click', func206);
+	});
+	
+	
+}
+
+for (let p of ps206) {
+	let remove = document.createElement('a');
+	remove.href = '';
+	remove.innerHTML = 'remove';
+
+	p.appendChild(remove);
+	remove.addEventListener('click', function funcRe (event) {
+		p.firstChild.remove();
+		event.preventDefault();
+
+		remove.removeEventListener('click', funcRe);
+	});
+	
+}
+
+
+
+
+
+
+
+//2 Оберните сначала текст абзаца в теги span, добавьте к этим тегам возможность редактирования, а затем добавьте в конец каждого абзаца ссылку на удаление.
+let ps207 = document.querySelectorAll('#parent207 p');
+for (let p of ps207) {
+	let span = document.createAttribute('span');
+	span.innerHTML = p.innerHTML;
+	
+console.log(span);
+
+	//p.appendChild(span);
+}
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+//Стилизация элементов на JavaScript
+
+//1 Добавьте в конец каждого абзаца ссылку, по клику на которую текст абзаца будет перечеркиваться (а ссылка - нет).
+//2 Модифицируйте предыдущую задачу так, чтобы после нажатия на ссылку эта ссылка удалялась из абзаца (а текст абзаца становился перечеркнутым).
+
+let ps208 = document.querySelectorAll('#parent208 p');
+for (let p of ps208) {
+	let span = document.createElement('span');
+	span.innerHTML = p.innerHTML;
+	p.innerHTML = '';
+	p.appendChild(span);
+	console.log(span);
+	
+	let a = document.createElement('a');
+	a.href = '';
+	a.innerHTML = 'cross';
+	p.appendChild(a);
+	console.log(a);
+	
+	a.addEventListener('click', function (event) {
+		span.className = 'crossed';
+		event.preventDefault();
+		p.removeChild(a);
 	});
 }
