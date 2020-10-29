@@ -8707,12 +8707,36 @@ for (let p of ps206) {
 //2 Оберните сначала текст абзаца в теги span, добавьте к этим тегам возможность редактирования, а затем добавьте в конец каждого абзаца ссылку на удаление.
 let ps207 = document.querySelectorAll('#parent207 p');
 for (let p of ps207) {
-	let span = document.createAttribute('span');
+	let span = document.createElement('span');
 	span.innerHTML = p.innerHTML;
-	
-console.log(span);
+	p.innerHTML = '';
+	p.appendChild(span);
 
-	//p.appendChild(span);
+	span.addEventListener('click', function spa() {
+		let input = document.createElement('input');
+		input.value = span.innerHTML;
+		span.innerHTML = '';
+		p.appendChild(input);
+
+		input.addEventListener('blur', function() {
+			span.innerHTML = this.value;
+			this.remove();
+			span.addEventListener('click', spa);
+		});
+		span.removeEventListener('click', spa);
+	});
+
+	let a = document.createElement('a');
+	a.href = '';
+	a.innerHTML = 'remove';
+	p.appendChild(a);
+
+	a.addEventListener('click', function funcA (event) {
+		p.removeChild(span);
+		event.preventDefault();
+		a.removeEventListener('click', funcA);
+	});
+	
 }
 
 
@@ -8746,5 +8770,26 @@ for (let p of ps208) {
 		span.className = 'crossed';
 		event.preventDefault();
 		p.removeChild(a);
+	});
+}
+
+
+
+//3 Дана некоторая HTML таблица. Добавьте в эту таблицу еще одну колонку со ссылкой. По нажатию на эту ссылку ряд с этой ссылкой должен стать зеленого фона.
+let trs209 = document.querySelectorAll('#table209 tr');
+for (let tr of trs209) {
+	let td = document.createElement('td');
+	tr.appendChild(td);
+
+	let a = document.createElement('a');
+	a.href = '';
+	a.innerHTML = 'color the row';
+	td.appendChild(a);
+
+	a.addEventListener('click', function color(event) {
+		tr.classList.toggle('back_color');
+		event.preventDefault();
+
+		
 	});
 }

@@ -33,3 +33,6 @@ td {
 table {
     border-collapse: collapse;
 }
+.back_color {
+	background-color: rgb(215, 105, 243);
+}
