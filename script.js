@@ -8902,3 +8902,37 @@ for (let td of tds218) {
 		(i == colors.length) ? i = 0 : false;
 	});
 }
+
+
+
+
+
+/////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+//Активация ограниченного количества элементов
+
+//1 Давайте теперь сделаем так, чтобы можно было активировать ограниченное количество элементов.
+let tds219 = document.querySelectorAll('#table219 td');
+for (let td of tds219) {
+	
+	td.addEventListener('click', function() {
+		let activeTds = document.querySelectorAll('#table219 td.active');
+		(activeTds && activeTds.length < 3) ? this.classList.add('active') : false;
+	});
+}
+
+//2 Сделайте так, чтобы в одном ряду таблице можно было активировать не более 5-ти ячеек.
+let trs220 = document.querySelectorAll('#table220 tr');
+for (let tr of trs220) {
+	let tds = tr.querySelectorAll('td');
+	for (let td of tds) {
+		td.addEventListener('click', function() {
+			let active1  = tr.querySelectorAll('#table220 td.active');
+			(active1 && active1.length < 3) ? this.classList.add('active') : false;
+
+		});
+	}
+}
+
+//3 Сделайте так, чтобы в для активированной ячейки нельзя было активировать ее соседей слева и справа.
+let tds221 = document.querySelectorAll('#table221 td');
