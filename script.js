@@ -8776,6 +8776,7 @@ for (let p of ps208) {
 
 
 //3 Дана некоторая HTML таблица. Добавьте в эту таблицу еще одну колонку со ссылкой. По нажатию на эту ссылку ряд с этой ссылкой должен стать зеленого фона.
+//4 Модифицируйте предыдущую задачу так, чтобы первое нажатие по ссылке красило ряд в зеленый фон, а второе нажатие отменяло это действие.
 let trs209 = document.querySelectorAll('#table209 tr');
 for (let tr of trs209) {
 	let td = document.createElement('td');
@@ -8789,7 +8790,34 @@ for (let tr of trs209) {
 	a.addEventListener('click', function color(event) {
 		tr.classList.toggle('back_color');
 		event.preventDefault();
-
-		
 	});
 }
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+//Кнопки для скрытия и показа элемента на JavaScript
+
+//Давайте теперь сделаем так, чтобы по клику на одну кнопку наш абзац скрывался, а на другую - показывался. 
+let elem210 = document.querySelector('#elem210');
+let show210 = document.querySelector('#show210');
+let hide210 = document.querySelector('#hide210');
+
+hide210.addEventListener('click', function () {
+	elem210.classList.add('hidden');
+});
+show210.addEventListener('click', function () {
+	elem210.classList.remove('hidden');
+});
+
+//Пусть по первому клику на эту кнопку элемент показывается, а по второму - скрывается.
+let hideShow = document.querySelector('#hideShow');
+hideShow.addEventListener('click', () => {
+	elem210.classList.toggle('hidden');
+});
