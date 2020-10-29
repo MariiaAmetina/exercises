@@ -8821,3 +8821,38 @@ let hideShow = document.querySelector('#hideShow');
 hideShow.addEventListener('click', () => {
 	elem210.classList.toggle('hidden');
 });
+
+
+
+
+/////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+//Много элементов с кнопками показа на JavaScript
+
+//Сделаем так, чтобы по клику на кнопку скрывался или показывался соответствующий ей абзац.
+//1 способ Теперь по клику на любую кнопку мы будем читать содержимое ее атрибута data-elem и искать абзац с таким id.
+let buttons = document.querySelectorAll('#button211'); 
+for (let button of buttons) {
+	button.addEventListener('click', function() {
+		let elem = document.querySelector('#' + this.dataset.elem);
+		elem.classList.toggle('hidden');
+	});
+}
+
+//2 Давайте сделаем так, чтобы связь была по порядковому номеру
+let elems214 = document.querySelectorAll('#toggle214 p');
+let buttons214 = document.querySelectorAll('#toggle214 button');
+
+for (let i = 0; i < buttons214.length; i++) {
+	buttons214[i].addEventListener('click', function() {
+		elems214[i].classList.toggle('hidden');
+	});
+}
+
+//3 Как можно увидеть, абзац, связанный с кнопкой, является ее соседом слева. Можно это использовать в качестве связи:
+let buttons215 = document.querySelectorAll('#button215');
+for (let button of buttons215) {
+	button.addEventListener('click', function() {
+		this.previousElementSibling.classList.toggle('hidden');
+	});
+}
