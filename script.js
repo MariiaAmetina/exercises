@@ -9131,3 +9131,34 @@ button223.addEventListener('click', function addNew() {
 		event.preventDefault();
 	});
 });
+
+
+
+
+//10 Выведите на экран каждого работника в своем теге li тега ul.
+let employees224 = [
+	{name: 'employee1', age: 30, salary: 400},
+	{name: 'employee2', age: 31, salary: 500},
+	{name: 'employee3', age: 32, salary: 600},
+];
+let ol224 = document.createElement('ol');
+document.body.appendChild(ol224);
+for (let elem of employees224) {
+	let li = document.createElement('li');
+	ol224.appendChild(li);
+	let ul = document.createElement('ul');
+	li.appendChild(ul);
+
+	let li1 = document.createElement('li');
+	li1.innerHTML =elem.name;
+
+	let li2 = document.createElement('li');
+	li2.innerHTML =elem.age;
+
+	let li3 = document.createElement('li');
+	li3.innerHTML =elem.salary;
+
+	ul.appendChild(li1);
+	ul.appendChild(li2);
+	ul.appendChild(li3);
+}
