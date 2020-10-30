@@ -8968,6 +8968,13 @@ for (let i = 0; i < arr222.length; i++) {
 	let li = document.createElement('li');
 	li.innerHTML = arr222[i];
 
+	createInput(li);
+	
+
+	ul222.appendChild(li);
+}
+
+function createInput(li) {
 	li.addEventListener('click', function func222() {
 		let input = document.createElement('input');
 		input.value = li.innerHTML;
@@ -8981,6 +8988,19 @@ for (let i = 0; i < arr222.length; i++) {
 
 		li.removeEventListener('click', func222);
 	});
-
-	ul222.appendChild(li);
 }
+
+//3 Модифицируйте предыдущую задачу так, чтобы под списком был инпут, с помощью которого можно будет добавить новый элемент в конец списка ul. 
+//Сделайте так, чтобы новые li также можно было редактировать.
+let button222 = document.createElement('input');
+button222.type = 'submit';
+button222.value = 'create li';
+document.body.appendChild(button222);
+
+button222.addEventListener('click', function butt222() {
+	let li = document.createElement('li');
+	li.innerHTML = 'new';
+	ul222.appendChild(li);
+
+	createInput(li);
+});
