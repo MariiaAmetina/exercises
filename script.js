@@ -8934,5 +8934,53 @@ for (let tr of trs220) {
 	}
 }
 
-//3 Сделайте так, чтобы в для активированной ячейки нельзя было активировать ее соседей слева и справа.
+//3 ???????Сделайте так, чтобы в для активированной ячейки нельзя было активировать ее соседей слева и справа.
 let tds221 = document.querySelectorAll('#table221 td');
+for (let td of tds221) {
+	
+	td.addEventListener('click', function () {
+		this.classList.add('active');
+		let left = this.previousElementSibling;
+		let right = this.nextElementSibling;
+		(this.classList.contains('active')) ? (left.classList.remove('active')) && (right.classList.remove('active')) : false;
+	});
+}
+
+//4 Сделайте так, чтобы в для активированной ячейки нельзя было активировать ее соседей сверху и снизу.
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+//Практика на изменение элементов на JavaScript
+
+//1 Дан массив. Выведите его элементы в виде списка ul.
+//2 Модифицируйте предыдущую задачу так, чтобы по клику на любую li в ней появлялся инпут, с помощью которого ее можно будет поредактировать.
+let arr222 = [1, 2, 3, 4];
+let ul222 = document.createElement('ul');
+document.body.appendChild(ul222);
+for (let i = 0; i < arr222.length; i++) {
+	let li = document.createElement('li');
+	li.innerHTML = arr222[i];
+
+	li.addEventListener('click', function func222() {
+		let input = document.createElement('input');
+		input.value = li.innerHTML;
+		li.innerHTML = '';
+		li.appendChild(input);
+
+		input.addEventListener('blur', function blur222() {
+			li.innerHTML = input.value;
+			li.addEventListener('click', func222);
+		});
+
+		li.removeEventListener('click', func222);
+	});
+
+	ul222.appendChild(li);
+}
