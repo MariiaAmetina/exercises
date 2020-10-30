@@ -8967,11 +8967,11 @@ document.body.appendChild(ul222);
 for (let i = 0; i < arr222.length; i++) {
 	let li = document.createElement('li');
 	li.innerHTML = arr222[i];
+	ul222.appendChild(li);
 
 	createInput(li);
-	
-
-	ul222.appendChild(li);
+	removeLi(li);
+	crossLi(li);
 }
 
 function createInput(li) {
@@ -9003,4 +9003,34 @@ button222.addEventListener('click', function butt222() {
 	ul222.appendChild(li);
 
 	createInput(li);
+	removeLi(li);
+	crossLi(li);
 });
+
+//4 Модифицируйте предыдущую задачу так, чтобы в конце каждой li стояла ссылка 'удалить', с помощью которой можно будет удалить эту li из ul.
+function removeLi(li) {
+	let remove = document.createElement('a');
+	remove.href = '';
+	remove.innerHTML = 'delete li';
+
+	ul222.append(remove);
+
+	remove.addEventListener('click', function reFunc(event) {
+		ul222.removeChild(li);
+		event.preventDefault();
+		ul222.removeChild(remove);
+	});
+}
+
+//5 Модифицируйте предыдущую задачу так, чтобы в конце каждой li также стояла ссылка 'перечеркнуть', с помощью которой можно будет перечеркнуть текст данного тега li.
+function crossLi (li) {
+	let cross = document.createElement('a');
+	cross.href = '';
+	cross.innerHTML = ' cross text';
+	ul222.appendChild(cross);
+
+	cross.addEventListener('click', (event) => {
+		li.classList.toggle('crossed');
+		event.preventDefault();
+	});
+}
