@@ -9011,7 +9011,7 @@ button222.addEventListener('click', function butt222() {
 function removeLi(li) {
 	let remove = document.createElement('a');
 	remove.href = '';
-	remove.innerHTML = 'delete li';
+	remove.innerHTML = 'delete';
 
 	ul222.append(remove);
 
@@ -9064,10 +9064,24 @@ for (let elem of employees223) {
 	tr.appendChild(td3);
 	table223.appendChild(tr);
 
-
+//7 Добавьте ячейкам созданной таблицы возможность редактирования.
 	createInput(td1);
 	createInput(td2);
 	createInput(td3);
+
+//8 Добавьте в вашу таблицу новую колонку со ссылкой на удаления ряда из таблицы.
+
+	let td4 = document.createElement('td');
+	let a = document.createElement('a');
+	tr.appendChild(td4);
+	td4.appendChild(a);
+	a.href = '';
+	a.innerHTML = 'delete a row';
+	a.addEventListener('click', function(event) {
+		table223.removeChild(tr);
+		event.preventDefault();
+	});
 }
 document.body.appendChild(table223);
-//7 Добавьте ячейкам созданной таблицы возможность редактирования.
+
+//9
