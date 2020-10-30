@@ -9084,4 +9084,50 @@ for (let elem of employees223) {
 }
 document.body.appendChild(table223);
 
-//9
+//9 Сделайте под таблицей 3 инпута и кнопку для добавление нового работника. 
+//Пусть в инпуты вводятся имя, возраст и зарплата, и по нажатию на кнопку новый работник добавляется в таблицу. 
+//Реализуйте редактирование ячеек для вновь добавленных работников.
+
+let inpName = document.createElement('input');
+inpName.placeholder = 'tipe new name';
+document.body.appendChild(inpName);
+let inpAge = document.createElement('input');
+inpAge.placeholder = 'tipe age';
+document.body.appendChild(inpAge);
+let inpSalary = document.createElement('input');
+inpSalary.placeholder = 'tipe salary';
+document.body.appendChild(inpSalary);
+let button223 = document.createElement('input');
+button223.type = 'submit';
+document.body.appendChild(button223);
+
+button223.addEventListener('click', function addNew() {
+	let tr = document.createElement('tr');
+	
+	let td1 = document.createElement('td');
+	td1.innerHTML = inpName.value;
+	let td2 = document.createElement('td');
+	td2.innerHTML = inpAge.value;
+	let td3 = document.createElement('td');
+	td3.innerHTML = inpSalary.value;
+
+	tr.appendChild(td1);
+	tr.appendChild(td2);
+	tr.appendChild(td3);
+	table223.appendChild(tr);
+
+	createInput(td1);
+	createInput(td2);
+	createInput(td3);
+
+	let td4 = document.createElement('td');
+	let a = document.createElement('a');
+	tr.appendChild(td4);
+	td4.appendChild(a);
+	a.href = '';
+	a.innerHTML = 'delete a row';
+	a.addEventListener('click', function(event) {
+		table223.removeChild(tr);
+		event.preventDefault();
+	});
+});
