@@ -9034,3 +9034,40 @@ function crossLi (li) {
 		event.preventDefault();
 	});
 }
+
+
+
+
+
+
+//6 Выведите этих работников в HTML таблице.
+let employees223 = [
+	{name: 'employee1', age: 30, salary: 400},
+	{name: 'employee2', age: 31, salary: 500},
+	{name: 'employee3', age: 32, salary: 600},
+];
+let table223 = document.createElement('table');
+
+
+for (let elem of employees223) {
+	let tr = document.createElement('tr');
+	
+	let td1 = document.createElement('td');
+	td1.innerHTML = elem.name;
+	let td2 = document.createElement('td');
+	td2.innerHTML = elem.age;
+	let td3 = document.createElement('td');
+	td3.innerHTML = elem.salary;
+
+	tr.appendChild(td1);
+	tr.appendChild(td2);
+	tr.appendChild(td3);
+	table223.appendChild(tr);
+
+
+	createInput(td1);
+	createInput(td2);
+	createInput(td3);
+}
+document.body.appendChild(table223);
+//7 Добавьте ячейкам созданной таблицы возможность редактирования.
