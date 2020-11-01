@@ -9161,4 +9161,77 @@ for (let elem of employees224) {
 	ul.appendChild(li1);
 	ul.appendChild(li2);
 	ul.appendChild(li3);
+
+	createInput(li1);
+	createInput(li2);
+	createInput(li3);
+
+	
 }
+
+//11 Сделайте так, чтобы по клику на имя, возраст или зарплату работника появлялся инпут для редактирования этого поля.
+//12 Добавьте в конец каждого тега li ссылку на удаление этого li из списка.
+//13 Под списком сделайте форму для добавление нового работника.
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+//Поиск ячеек таблицы с помощью атрибута data
+
+//1 Сделайте так, чтобы по клику на любую ячейку в красный фон красились все ячейки этой колонки.
+let tds225 = document.querySelectorAll('#table225 td[data-col="1"]');
+
+for (let td of tds225) {
+	td.addEventListener('click', function() {
+		for (let t of tds225) {
+			t.classList.toggle('color1');
+		}
+	});
+}
+let tds226 = document.querySelectorAll('#table225 td[data-col="2"]');
+
+for (let td of tds226) {
+	td.addEventListener('click', function() {
+		for (let t of tds226) {
+			t.classList.toggle('color2');
+		}
+	});
+}
+let tds227 = document.querySelectorAll('#table225 td[data-col="3"]');
+
+for (let td of tds227) {
+	td.addEventListener('click', function() {
+		for (let t of tds227) {
+			t.classList.toggle('color3');
+		}
+	});
+}
+
+
+
+//2 Сделайте кнопку, по нажатию на которую в красный фон покрасится та ячейка, номер которой совпадает с номером из переменных.
+let col228 = 2;
+let row228 = 3;
+let button228 = document.querySelector('#button228');
+
+let tds228 = document.querySelectorAll('#table228 td');
+let colo = document.querySelectorAll('#table228 td[data-col="' + col228 + '"]');
+let ro = document.querySelectorAll('#table228 td[data-row="' + row228 + '"]');
+console.log(colo);
+console.log(ro);
+
+
+button228.addEventListener('click', function() {
+	for (let td of tds228) {
+		((td.dataset.col == col228) && (td.dataset.row == row228)) ? td.classList.add('color1') : false;
+	}
+	
+});
