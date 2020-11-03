@@ -9257,3 +9257,10 @@ for (let tr of trs229) {
 	
 }
 //2 Модифицируйте предыдущую задачу так, чтобы в ячейку добавлялся еще и номер ее ряда
+//3 Дана некоторая таблица. Сделайте так, чтобы по клику на любую ячейку в ее текст выводился номер ряда и номер колонки этой ячейки.
+let tds229 = document.querySelectorAll('#table229 td');
+for (let td of tds229){
+	td.addEventListener('click', function() {
+		td.innerHTML = td.dataset.row + '. ' + td.dataset.col;
+	});
+}
