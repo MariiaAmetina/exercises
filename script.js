@@ -9262,5 +9262,9 @@ let tds229 = document.querySelectorAll('#table229 td');
 for (let td of tds229){
 	td.addEventListener('click', function() {
 		td.innerHTML = td.dataset.row + '. ' + td.dataset.col;
+
+		(td.dataset.row == td.dataset.col) ? td.classList.add('color1') : td.style.backgroundColor = 'red';
 	});
 }
+
+//4 Пусть у нас есть некоторая квадратная HTML таблица. В такой таблице есть две диагонали. Назовем главной диагональ, идущую от верхнего левого угла к нижнему правому. Сделайте так, чтобы по клику на любую ячейку главной диагонали эта ячейка красилась в красный цвет фона, а по клику любую другую ячейку - она красилась в зеленый.
