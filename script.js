@@ -8934,17 +8934,20 @@ for (let tr of trs220) {
 	}
 }
 
-//3 ???????Сделайте так, чтобы в для активированной ячейки нельзя было активировать ее соседей слева и справа.
+//3 Сделайте так, чтобы в для активированной ячейки нельзя было активировать ее соседей слева и справа.
 let tds221 = document.querySelectorAll('#table221 td');
 for (let td of tds221) {
-	
-	td.addEventListener('click', function () {
-		this.classList.add('active');
-		let left = this.previousElementSibling;
-		let right = this.nextElementSibling;
-		(this.classList.contains('active')) ? (left.classList.remove('active')) && (right.classList.remove('active')) : false;
+	td.addEventListener('click', function() {
+		let previous = this.previousElementSibling;
+		let next = this.nextElementSibling;
+		td.addEventListener('click', function() {
+			(!previous.classList.contains('active') && !next.classList.contains('active')) ? td.classList.add('active') : false;
+		});
+		
 	});
 }
+
+
 
 //4 Сделайте так, чтобы в для активированной ячейки нельзя было активировать ее соседей сверху и снизу.
 
@@ -9290,3 +9293,22 @@ let tds232 = document.querySelectorAll('#table230 tr:nth-child(even) td:nth-chil
 for (let td of tds232) {
 	td.style.backgroundColor = 'pink';
 }
+
+
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+//Функции для работы с DOM элементом на JavaScript
+
+function setText(id, text) {
+	let elem = document.getElementById(id);
+	elem.innerHTML = text;
+}
+setText('p233', 'lol');
+
+//2 Сделайте функцию setAttr, которая будет менять атрибут DOM элементу. Пусть первым параметром функция принимает селектор элемента, вторым - имя атрибута, а третьим - его новое значение.
+function setAttr235(id, attr, newAttr) {
+	let elem = document.getElementById(id);
+	elem.type = attr;
+	elem.type = newAttr;
+}
+setAttr235('button234', 'text', 'submit');

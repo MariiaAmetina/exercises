@@ -43,7 +43,9 @@ table {
 .active {
 	background: rgb(163, 52, 214);
 }
-
+.blocked {
+	background: rosybrown;
+}
 .color1 {
 	background: rgb(73, 137, 221);
 }
