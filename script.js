@@ -9423,3 +9423,27 @@ let arr243 = ['ab', 'cd', 'ef'];
 for (let elem of arr243) {
 	appendElem242(ul243, elem);
 }
+
+
+
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+//Функция для создания HTML таблиц на JavaScript
+let table244 = document.querySelector('#table244');
+createTable(6, 6, table244);
+
+function createTable(rows, cols, parent) {
+	let table = document.createElement('table');
+
+	for (let i = 0; i < rows; i++) {
+		let tr = document.createElement('tr');
+
+		for (let j = 0; j < cols; j++) {
+			let td = document.createElement('td');
+			tr.append(td);
+		}
+		table.append(tr);
+	}
+
+	parent.append(table);
+}
