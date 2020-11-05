@@ -9357,3 +9357,31 @@ function forEach237(selector, func) {
 	}
 }
 forEach237('.elem235', addIndex);
+
+
+
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+//Передача DOM элемента параметром функции
+
+//1 Сделайте функцию appendText, которая первым параметром будет принимать DOM элемент, а вторым - текст. Сделайте так, чтобы данная функция добавляла текст в конец этого элемента.
+let p238 = document.querySelector('#p238');
+appendText238(p238, 'you');
+
+function appendText238(elem, text) {
+	elem.innerHTML += text;
+}
+
+//2 Даны абзацы. Получите их, переберите циклом и каждому добавьте в конец '!' с помощью функции appendText, сделанной в предыдущей задаче.
+let ps239 = document.querySelectorAll('.p239');
+for (let elem of ps239) {
+	appendText238(elem, '!');
+}
+
+//3 Сделайте функцию setValue, которая первым параметром будет принимать ссылку на инпут, а вторым - текст. Сделайте так, чтобы данная функция устанавливала переданный текст в value инпута.
+let button240 = document.querySelector('#button240');
+setValue240(button240, 'new button');
+
+function setValue240 (elem, text) {
+	elem.value = text;
+}
