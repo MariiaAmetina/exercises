@@ -9447,3 +9447,34 @@ function createTable(rows, cols, parent) {
 
 	parent.append(table);
 }
+
+
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+//Возврат таблицы из функции на JavaScript
+
+//1 Давайте модифицируем функцию createTable так, чтобы она не добавляла таблицу в какой-то элемент, а просто возвращала ее через return.
+let table245 = document.querySelector('#table245');
+let newTable = createTable245(4, 7);
+newTable.classList.add('active');
+table245.append(newTable);
+
+function createTable245(rows, cols) {
+	let table = document.createElement('table');
+
+	for (let i = 0; i < rows; i++) {
+		let tr = document.createElement('tr');
+
+		for (let j = 0; j < cols; j++) {
+			let td = document.createElement('td');
+			tr.append(td);
+		}
+		table.append(tr);
+	}
+
+	return table;
+}
+
+//2 С помощью функции createTable создайте новую таблицу, а затем вставьте ее в конец дива в абзацами.
+let elem246 = document.getElementById('elem246');
+elem246.append(createTable245(2, 2));
