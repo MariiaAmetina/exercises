@@ -9478,3 +9478,33 @@ function createTable245(rows, cols) {
 //2 С помощью функции createTable создайте новую таблицу, а затем вставьте ее в конец дива в абзацами.
 let elem246 = document.getElementById('elem246');
 elem246.append(createTable245(2, 2));
+
+
+
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+//Функция для создания таблицы из двухмерного массива
+
+//Давайте теперь сделаем функцию createTableByArr, которая параметром будет принимать двухмерный массив и строить на его основе таблицу.
+let table247 = document.querySelector('#table247');
+let arr247 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+table247.append(createTableByArr(arr247));
+
+function createTableByArr (arr) {
+	let table = document.createElement('table');
+
+	for (let subArr of arr) {
+		let tr = document.createElement('tr');
+
+		for (let elem of subArr) {
+			let td = document.createElement('td');
+			td.innerHTML = elem;
+			tr.append(td);
+		}
+		table.append(tr);
+	}
+	
+
+	return table;
+}
