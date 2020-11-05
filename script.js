@@ -9385,3 +9385,41 @@ setValue240(button240, 'new button');
 function setValue240 (elem, text) {
 	elem.value = text;
 }
+
+
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+//Передача DOM группы элементов параметрами функций
+
+//1 Сделайте функцию appendText, которая первым параметром будет принимать массив DOM элементов, а вторым - текст. Сделайте так, чтобы данная функция добавляла текст в конец переданных элементов.
+let p241 = document.querySelectorAll('.p241');
+appendText241(p241, ' + sun');
+
+function appendText241(elems, text) {
+	for (let elem of elems) {
+		elem.innerHTML += text;
+	}
+}
+
+//2 Сделайте функцию appendElem, которая первым параметром будет принимать ссылку DOM объект, в котором лежит тег ul, а вторым - текст. Сделайте так, чтобы данная функция создавала новую li с переданным текстом и добавляла ее в конец переданного тега ul.
+let ul242 = document.querySelector('#ul242');
+appendElem242(ul242, 'first');
+appendElem242(ul242, 'let');
+appendElem242(ul242, 'me');
+appendElem242(ul242, 'take');
+appendElem242(ul242, 'a selfie');
+appendElem242(ul242, ';)');
+
+function appendElem242(ul, text) {
+	let li = document.createElement('li');
+	li.innerHTML = text;
+	ul.append(li);
+}
+
+//3 Дан массив и ul. С помощью функции appendElem, созданной в предыдущей задаче, запишите каждый элемент массива в отдельную li в этом ul.
+let ul243 = document.querySelector('#ul243');
+let arr243 = ['ab', 'cd', 'ef'];
+
+for (let elem of arr243) {
+	appendElem242(ul243, elem);
+}
