@@ -9312,3 +9312,15 @@ function setAttr235(id, attr, newAttr) {
 	elem.type = newAttr;
 }
 setAttr235('button234', 'text', 'submit');
+
+
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+//Функции для работы с группой DOM элементов
+function appendText(selector, text) {
+	let elems = document.querySelectorAll(selector);
+	for (let elem of elems) {
+		elem.innerHTML += text;
+	}
+}
+appendText('.elem234', 'hello');
