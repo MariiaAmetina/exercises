@@ -9340,3 +9340,20 @@ function addSmth(elem) {
 }
 
 forEach236('.elem235', addSmth);
+
+
+
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+//Передача порядкового номера в коллбэк на JavaScript
+function addIndex(elem, index) {
+	elem.innerHTML = index + '. ' + elem.innerHTML;
+}
+function forEach237(selector, func) {
+	let elems = document.querySelectorAll(selector);
+
+	for (let i = 0; i < elems.length; i++) {
+		func(elems[i], i);
+	}
+}
+forEach237('.elem235', addIndex);
