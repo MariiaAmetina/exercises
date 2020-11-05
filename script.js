@@ -9324,3 +9324,19 @@ function appendText(selector, text) {
 	}
 }
 appendText('.elem234', 'hello');
+
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+//Передача коллбэка для работы с DOM на JavaScript
+function forEach236(selector, func) {
+	let elems = document.querySelectorAll(selector);
+
+	for (let elem of elems) {
+		func(elem);
+	}
+}
+function addSmth(elem) {
+	elem.innerHTML += '!';
+}
+
+forEach236('.elem235', addSmth);
