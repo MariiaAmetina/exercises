@@ -9508,3 +9508,33 @@ function createTableByArr (arr) {
 
 	return table;
 }
+
+
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+//Создание HTML таблицы из одномерного массива на JavaScript
+
+//1 Реализуйте описанную функцию convertArr. Потестируйте ее работу.
+let arr248 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; 
+let cols248 = 3;
+
+function convertArr248 (arr, cols) {
+	let newAr = [];
+	let rows = arr.length / cols;
+	for (let i = 0; i < rows; i++) {
+		let subAr = [];
+		for (let j = 0; j < cols; j++) {
+			subAr.push(arr.shift());
+		}
+		newAr.push(subAr);
+	}
+	return newAr;
+	
+}
+
+
+
+//2 С помощью комбинаций функций createTableByArr и convertArr создайте из приведенного массива таблицу размером 4 колонки. Добавьте созданную таблицу в какой-нибудь див.
+let div248 = document.querySelector('#table248');
+let newArray = convertArr248(arr248, 4);
+div248.append(createTableByArr(newArray));
