@@ -9515,7 +9515,7 @@ function createTableByArr (arr) {
 //Создание HTML таблицы из одномерного массива на JavaScript
 
 //1 Реализуйте описанную функцию convertArr. Потестируйте ее работу.
-let arr248 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; 
+let arr248 = [1, 2, 3, 4, 5, 6, 7, 8, 9]; 
 let cols248 = 3;
 
 function convertArr248 (arr, cols) {
@@ -9538,3 +9538,27 @@ function convertArr248 (arr, cols) {
 let div248 = document.querySelector('#table248');
 let newArray = convertArr248(arr248, 4);
 div248.append(createTableByArr(newArray));
+
+
+
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+//Нехватка элементов в массиве при создании таблицы
+function normalizeArr(twoArr, cols, sim) {
+	let lastSubArr = twoArr.pop();
+
+	for (let i = 0; i < cols; i++) {
+		if (lastSubArr[i] == undefined) {
+			lastSubArr.push(sim);
+		}
+	}
+	twoArr.push(lastSubArr);
+	return twoArr;
+}
+
+//2 С помощью комбинаций функций createTableByArr, normalizeArr и convertArr создайте из приведенного массива таблицу размером 5 колонок. Добавьте созданную таблицу в какой-нибудь див.
+let arr249 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; 
+let table249 = document.querySelector('#table249');
+let arr1 = convertArr248(arr249, 5);
+//let arr2 = normalizeArr(arr1, 5, '#');
+table249.append(createTableByArr(arr1));
